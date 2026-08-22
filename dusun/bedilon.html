@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Profil dan Potensi Dusun Bedilon">
+      <title>Dusun Bedilon - Web Desa</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+
+      <style>
+         .inner-page-header {
+             padding: 160px 0 80px;
+             /* Background disesuaikan dengan gambar dusun Bedilon (menu 2) */
+             background: linear-gradient(rgba(13, 15, 19, 0.8), rgba(13, 15, 19, 0.9)), url('../img/dusun/bedilon/view_bedilon.JPG') center/cover;
+             text-align: center;
+         }
+         
+         /* Styling khusus untuk Kartu Fasum */
+         .fasum-card-detail {
+             background: #fff;
+             border: 1px solid #f0f0f0;
+             border-radius: 12px;
+             overflow: hidden;
+             height: 100%;
+             transition: all 0.3s ease;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+             display: flex;
+             flex-direction: column;
+             cursor: pointer;
+         }
+         .fasum-card-detail:hover {
+             transform: translateY(-8px);
+             box-shadow: 0 15px 30px rgba(220, 53, 69, 0.15);
+             border-color: rgba(220, 53, 69, 0.2);
+         }
+         .fasum-card-detail .fasum-click-hint {
+             color: #d32f2f;
+             font-size: 0.85rem;
+             font-weight: 600;
+             margin-top: 10px;
+             transition: color 0.3s;
+         }
+         .fasum-img-wrapper {
+             width: 100%;
+             height: 200px;
+             background-color: #e9ecef;
+             position: relative;
+             overflow: hidden;
+         }
+         .fasum-img-wrapper img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+         }
+         .fasum-placeholder-text {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             color: #6c757d;
+             font-size: 0.9rem;
+             text-align: center;
+         }
+         .cat-header {
+             color: #d32f2f;
+             border-bottom: 2px solid #eaeaea;
+             padding-bottom: 12px;
+             margin-top: 50px;
+             margin-bottom: 30px;
+             font-weight: 700;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="../index.html">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link" href="../index.html#hero">Beranda</a></li>
+                  
+                  <li class="nav-item dropdown">
+                       <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                       </a>
+                       <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                          <li><a class="dropdown-item" href="../geografi_demografi.html">Geografi & Demografi</a></li>
+                          <li><a class="dropdown-item" href="../sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                       </ul>
+                    </li>
+      
+                  <li class="nav-item dropdown">
+                     <a class="nav-link active" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item" href="gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item active" href="bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+      
+                  <li class="nav-item"><a class="nav-link" href="../peta_interaktif.html">Peta Desa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../rincian_struktur_organisasi.html">Aparatur</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../apbdes.html">Transparansi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../index.html#contact-section">Kontak</a></li>
+               </ul>
+   
+               <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <img src="../img/lambang_kabupaten_wonosobo.webp" alt="Logo Kabupaten Wonosobo" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+            </div>
+         </div>
+      </nav>
+
+      <!-- ============================================================
+         HEADER HALAMAN DALAM
+         ============================================================ -->
+      <section class="inner-page-header">
+         <div class="container">
+             <h1 class="htitle text-white mb-3">Dusun <span>Bedilon</span></h1>
+             <p class="hdesc text-white mx-auto" style="max-width: 600px;">Kawasan asri yang menjadi sentra pertanian hortikultura produktif dan didukung oleh kuatnya semangat gotong royong warga.</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         KONTEN PROFIL & POTENSI
+         ============================================================ -->
+      <section id="profil-dusun" class="py-5">
+         <div class="container my-4">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <img src="../img/dusun/bedilon/view_bedilon.JPG" alt="Dusun Bedilon" class="img-fluid rounded-4 shadow-lg" style="border: 6px solid #fff;">
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <span class="slbl">Profil Wilayah</span>
+                  <h2 class="stitle text-start mb-4">Kawasan Asri <span>Bedilon</span></h2>
+                  
+                  <div class="mb-4">
+                     <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                        Dusun Bedilon terletak di <strong>bagian timur</strong> wilayah Desa Gemblengan. Dusun ini mencakup area pemukiman yang asri dengan pembagian administratif meliputi <strong>4 RT dan 1 RW</strong>.
+                     </p>
+                     <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                        Mayoritas warga di Dusun Bedilon menggantungkan mata pencahariannya sebagai <strong>petani dan peternak</strong>, menjadikan wilayah ini salah satu kawasan agraris yang paling produktif di desa.
+                     </p>
+                  </div>
+
+                  <div class="p-4 rounded-3 mt-4" style="background-color: rgba(220, 53, 69, 0.05); border-left: 4px solid #d32f2f;">
+                     <h5 class="mb-3" style="color: #d32f2f;"><i class="fas fa-seedling me-2"></i> Potensi Unggulan</h5>
+                     <p class="mb-0" style="color: #444;">
+                        Potensi utama Dusun Bedilon terletak pada sektor <strong>Pertanian Hortikultura</strong>. Lahan yang subur sangat mendukung budidaya komoditas unggulan seperti <strong>tanaman cabai dan tomat</strong> yang menjadi roda penggerak ekonomi utama bagi keluarga di dusun ini.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         DETAIL FASILITAS UMUM DUSUN BEDILON
+         ============================================================ -->
+      <section id="fasilitas-umum" class="py-5" style="background-color: #f8f9fa;">
+         <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+               <span class="slbl">Infrastruktur & Aset Spasial</span>
+               <h2 class="stitle">Detail <span>Fasilitas Umum</span></h2>
+               <div class="sline mx-auto"></div>
+               <p class="sdesc mx-auto mt-3" style="max-width: 650px;">
+                  Direktori fasilitas publik di Dusun Bedilon. Klik kartu untuk melihat foto, deskripsi lengkap, atau video lokasi (jika tersedia).
+               </p>
+            </div>
+
+            <!-- KATEGORI 1: TEMPAT IBADAH -->
+            <h3 class="cat-header" data-aos="fade-right"><i class="fas fa-mosque me-2"></i> Tempat Ibadah</h3>
+            <div class="row g-4 mb-5">
+               
+               <!-- Masjid Bedilon -->
+               <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="0">
+                  <div class="fasum-card-detail" onclick="showFasumModal(
+                        'Masjid Nurul Huda',
+                        'Dusun Bedilon',
+                        'Tempat ibadah utama bagi masyarakat Dusun Bedilon. Memfasilitasi kegiatan keagamaan rutin, shalat berjamaah, dan kegiatan sosial warga sekitar.',
+                        ['../img/dusun/bedilon/masjid_nurul_huda.png','../img/dusun/bedilon/masjid_nurul_huda _1.png'], 
+                        ''
+                     )">
+                     <div class="fasum-img-wrapper">
+                        <img src="" alt="" onerror="this.style.display='none';">
+                        <img src="../img/dusun/bedilon/masjid_nurul_huda.png" alt="Mushola Al Falah" onerror="this.style.display='none';"> 
+                     </div>
+                     <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h5 class="fw-bold mb-2">Masjid Bedilon</h5>
+                        <p class="text-danger mb-2" style="font-size: 0.9rem;"><i class="fas fa-map-marker-alt me-1"></i> Dusun Bedilon</p>
+                        <p class="fasum-click-hint mt-auto mb-0"><i class="fas fa-hand-pointer me-1"></i> Klik untuk detail</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Mushola Al-Falah -->
+               <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="fasum-card-detail" onclick="showFasumModal(
+                        'Mushola Al-Falah',
+                        'Dusun Bedilon',
+                        'Fasilitas ibadah mushola yang aktif menyelenggarakan kegiatan shalat berjamaah dan pengajian warga.',
+                        ['../img/dusun/bedilon/musola_alfurqon_1.png','../img/dusun/bedilon/musola_alfurqon.png'],
+                        ''
+                     )">
+                     <div class="fasum-img-wrapper">
+                        <img src="" alt="" onerror="this.style.display='none';">
+                         <img src="../img/dusun/bedilon/musola_alfurqon_1.png" alt="Mushola Al Falah" onerror="this.style.display='none';"> 
+                     </div>
+                     <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h5 class="fw-bold mb-2">Mushola Al Falah</h5>
+                        <p class="text-danger mb-2" style="font-size: 0.9rem;"><i class="fas fa-map-marker-alt me-1"></i> Dusun Bedilon</p>
+                        <p class="fasum-click-hint mt-auto mb-0"><i class="fas fa-hand-pointer me-1"></i> Klik untuk detail</p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+            <!-- Tombol Navigasi Antar Dusun -->
+            <div class="text-center mt-5 pt-4 border-top" data-aos="fade-up">
+               <h6 class="text-muted mb-3">Jelajahi Potensi Dusun Lainnya:</h6>
+               <div class="d-flex justify-content-center flex-wrap gap-2">
+                  <a href="gemblengan.html" class="btn btn-outline-danger px-4 rounded-pill">Gemblengan</a>
+                  <a href="gesing.html" class="btn btn-outline-danger px-4 rounded-pill">Gesing</a>
+                  <a href="gajihan.html" class="btn btn-outline-danger px-4 rounded-pill">Gajihan</a>
+                  <a href="kasiman.html" class="btn btn-outline-danger px-4 rounded-pill">Kasiman</a>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Akses Cepat</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="../index.html#hero"><i class="fas fa-chevron-right"></i>Beranda</a></li>
+                     <li><a href="../index.html#about"><i class="fas fa-chevron-right"></i>Profil Desa</a></li>
+                     <li><a href="../index.html#menu"><i class="fas fa-chevron-right"></i>Potensi Desa</a></li>
+                     <li><a href="../peta_interaktif.html"><i class="fas fa-chevron-right"></i>Peta Spasial</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Layanan Warga</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="../index.html#transparansi"><i class="fas fa-chevron-right"></i>Transparansi</a></li>
+                     <li><a href="../index.html#contact-section"><i class="fas fa-chevron-right"></i>Lapor/Aduan</a></li>
+                     <li><a href="../rincian_struktur_organisasi.html"><i class="fas fa-chevron-right"></i>Data Aparatur</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa Gemblengan, Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Telepon</strong>+62 812-3456-7890</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa Gemblengan</span>. All Rights Reserved.</p>
+                  <div><a href="#">Kebijakan Privasi</a><a href="#">Transparansi Anggaran</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+      <!-- ============================================================
+         MODAL POP-UP FASILITAS UMUM (DENGAN PEMUTAR VIDEO LOKAL)
+         ============================================================ -->
+      <div class="modal fade" id="fasumModal" tabindex="-1" aria-labelledby="fasumModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+               <div class="modal-header text-white" style="background-color: #d32f2f;">
+                  <h5 class="modal-title fw-bold text-white" id="fasumModalLabel">Detail Fasilitas Umum</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body p-4">
+                  <!-- Carousel/Slide Foto Fasum -->
+                  <div id="fasumCarousel" class="carousel slide mb-4 rounded-3 overflow-hidden shadow-sm" data-bs-ride="carousel">
+                     <div class="carousel-inner" id="carouselInner">
+                        <!-- Foto-foto akan dimasukkan secara dinamis oleh JavaScript -->
+                     </div>
+                     <button class="carousel-control-prev" type="button" data-bs-target="#fasumCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5); border-radius: 50%;"></span>
+                        <span class="visually-hidden">Sebelumnya</span>
+                     </button>
+                     <button class="carousel-control-next" type="button" data-bs-target="#fasumCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5); border-radius: 50%;"></span>
+                        <span class="visually-hidden">Selanjutnya</span>
+                     </button>
+                  </div>
+
+                  <!-- Informasi Fasum -->
+                  <h4 class="fw-bold mb-2" id="modalTitle" style="color: #2b2b2b;">Nama Fasum</h4>
+                  <p class="text-danger fw-semibold mb-3" id="modalLokasi"><i class="fas fa-map-marker-alt me-1"></i> Lokasi</p>
+                  <p class="text-muted mb-4" id="modalDesc" style="line-height: 1.7;">Deskripsi lengkap fasilitas umum...</p>
+
+                  <!-- Pemutar Video Lokal (HTML5 Video) -->
+                  <div id="videoContainer" class="d-none mt-4">
+                     <h6 class="fw-bold mb-2"><i class="fas fa-video text-danger me-2"></i>Video Dokumentasi / Drone:</h6>
+                     <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm bg-dark">
+                        <!-- Menggunakan tag video dari HTML5 untuk memutar video dari folder lokal server -->
+                        <video id="modalVideo" controls preload="metadata" style="width: 100%; height: 100%;">
+                           <source id="videoSource" src="" type="video/mp4">
+                           Browser Anda tidak mendukung pemutar video HTML5.
+                        </video>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    
+      <!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- Magnific Popup -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+
+      <!-- JavaScript Pop-up Fasum LOKAL -->
+      <script>
+         function showFasumModal(nama, lokasi, deskripsi, fotoArray, videoUrl) {
+            // Set Judul, Lokasi, dan Deskripsi
+            document.getElementById('modalTitle').innerText = nama;
+            document.getElementById('modalLokasi').innerHTML = '<i class="fas fa-map-marker-alt me-1"></i> ' + lokasi;
+            document.getElementById('modalDesc').innerText = deskripsi;
+
+            // Render Slider Foto (Jalur foto lokal)
+            const carouselInner = document.getElementById('carouselInner');
+            carouselInner.innerHTML = '';
+
+            if (fotoArray && fotoArray.length > 0) {
+               fotoArray.forEach((foto, index) => {
+                  const activeClass = index === 0 ? 'active' : '';
+                  carouselInner.innerHTML += `
+                     <div class="carousel-item ${activeClass}">
+                        <img src="${foto}" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="${nama}" onerror="this.src='img/placeholder.jpg';">
+                     </div>
+                  `;
+               });
+               document.getElementById('fasumCarousel').classList.remove('d-none');
+            } else {
+               document.getElementById('fasumCarousel').classList.add('d-none');
+            }
+
+            // Render Pemutar Video Lokal (.mp4, .webm, dll dari server)
+            const videoContainer = document.getElementById('videoContainer');
+            const modalVideo = document.getElementById('modalVideo');
+            const videoSource = document.getElementById('videoSource');
+
+            if (videoUrl && videoUrl.trim() !== '') {
+               videoSource.src = videoUrl;
+               modalVideo.load(); // Wajib di-load ulang agar tag video mendeteksi source baru
+               videoContainer.classList.remove('d-none');
+            } else {
+               modalVideo.pause();
+               videoSource.src = '';
+               modalVideo.load();
+               videoContainer.classList.add('d-none');
+            }
+
+            // Tampilkan Modal menggunakan sintaks Bootstrap 5
+            var myModalElement = document.getElementById('fasumModal');
+            var myModal = new bootstrap.Modal(myModalElement);
+            myModal.show();
+         }
+
+         // Hentikan (pause) pemutaran video saat modal ditutup agar suaranya tidak bocor
+         document.getElementById('fasumModal').addEventListener('hidden.bs.modal', function () {
+            const modalVideo = document.getElementById('modalVideo');
+            modalVideo.pause();
+         });
+      </script>
+   </body>
+</html>
