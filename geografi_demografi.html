@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kondisi Geografi, Demografi, dan Sosial Ekonomi Desa Gemblengan">
+    <title>Geografi & Demografi - WebDesa Gemblengan</title>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Bootstrap 5.3 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- AOS Animate on Scroll -->
+    <link href="css/aos.css" rel="stylesheet"/>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <!-- Style CSS Utama -->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <style>
+        .inner-header {
+            position: relative;
+            background-color: #111111; 
+            padding: 120px 0 80px 0;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 60px;
+        }
+        .content-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            /* height: 100%; Dihapus agar tidak bertabrakan (overlap) dengan footer saat isi bertambah */
+            margin-bottom: 30px;
+        }
+        .info-icon {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        /* Custom Table Styling */
+        .custom-table {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .custom-table thead {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+        .custom-table th, .custom-table td {
+            padding: 15px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+    <div id="topbar">
+        <div class="container">
+           <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <div class="top-contact d-flex flex-wrap">
+                 <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                 <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                 <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    
+    <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+    <nav class="navbar navbar-expand-lg shadow-sm" id="nav" style="background:#fff;">
+        <div class="container">
+           <a class="navbar-brand" href="index.html">
+              <div class="blogo">
+                 <div class="bico"><i class="fas fa-landmark"></i></div>
+                 <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                 </div>
+              </div>
+           </a>
+           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+           </button>
+           <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav mx-auto">
+                 <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+                 
+                 <!-- Dropdown Profil Desa -->
+                 <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                        <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                        <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                     </ul>
+                  </li>
+
+                 <!-- Dropdown Potensi Dusun (Dari penyesuaian sebelumnya) -->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+
+                 <li class="nav-item"><a class="nav-link" href="Peta_Interaktif.html">Peta Desa</a></li>
+                 <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index.html#chefs">Aparatur</a></li>
+                 <li class="nav-item"><a class="nav-link" href="apbdes.html">Transparansi</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Kontak</a></li>
+              </ul>
+
+              <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <!-- PENTING: Ganti tulisan 'nama-logo-anda.png' dengan nama file logo Anda yang sebenarnya -->
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kanan" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+           </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         INNER HEADER
+         ============================================================ -->
+    <section class="inner-header">
+       <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+          <span class="mb-3 px-4 py-2 shadow-sm" style="background-color: #e74c3c; color: #fff; font-weight: 600; border-radius: 50px; font-size: 0.85rem; letter-spacing: 0.5px; display: inline-block;">
+             <i class="fas fa-map-marked-alt me-1"></i> Data & Fakta
+          </span>
+          <h1 class="htitle text-white mb-3">Geografi & <span style="color: var(--primary);">Demografi</span></h1>
+          <p class="hdesc text-light mx-auto" style="max-width: 600px;">Gambaran umum mengenai kondisi geografis, kependudukan, topografi, hingga keadaan sosial ekonomi masyarakat Desa Gemblengan.</p>
+       </div>
+    </section>
+
+    <!-- ============================================================
+         KONDISI GEOGRAFIS
+         ============================================================ -->
+    <section id="geografi" class="pb-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="slbl">Letak & Wilayah</span>
+                <h2 class="stitle">Kondisi <span>Geografis</span></h2>
+                <div class="sline mx-auto"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Letak Geografi -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="info-card">
+                        <i class="fas fa-map-signs info-icon"></i>
+                        <h4 class="fw-bold mb-3">Letak Geografis</h4>
+                        <p class="content-text mb-0">
+                            Desa Gemblengan secara administratif termasuk dalam wilayah Kecamatan Garung, Kabupaten Wonosobo. Terletak di arah Utara Kabupaten Wonosobo, dengan jarak 03 Km dari kantor kecamatan. Jarak Desa Gemblengan dari kantor bupati kabupaten Wonosobo sekitar 11 Km. Waktu tempuh menuju pusat kota kecamatan sekitar 15 menit, sedangkan waktu tempuh menuju ibukota Kabupaten kira-kira 25 menit. Desa Gemblengan terdiri dari 5 dusun (5 RW) atau kampung. Nama-nama dusun atau kampung itu adalah Dusun Gemblengan, Dusun Gajihan, Dusun Bedilon, Dusun Kasiman, dan Dusun Gesing. Luas wilayah Desa Gemblengan adalah 339,703 Ha dengan batas-batas desa sebagai berikut:
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Topografi & Iklim -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card">
+                        <i class="fas fa-mountain info-icon"></i>
+                        <h4 class="fw-bold mb-3">Topografi & Iklim</h4>
+                        <p class="content-text mb-0">
+                            Desa Gemblengan secara topografi berupa pegunungan dengan ketinggian antara 975 sd 1.019 meter di atas permukaan laut (dpl), sehingga tergolong dataran tinggi. Suhu di daerah ini cukup bervariasi antara 11°2 - 11°5 dan 0°2 - 12° LS, 109,9222 BT, -7,31080 LS. Suhu udara berkisar antara 24°C - 27° Celcius. Jenis tanah yang ada di wilayah sebagian besar adalah tanah andosol sebanyak 25%. Sifat tanah andosol adalah bersolum tebal/dalam dan berwarna kuning terang, makin dalam makin terang. Tekstur liatnya coklat dengan kadar liat kurang dari 30%. Kepekaan tanah andosol terhadap erosi cukup tinggi, keasamannya bermacam-macam, dan bahan organiknya 6%. Iklim merupakan salah satu faktor yang berpengaruh pada pertumbuhan tanaman. Iklim Desa Gemblengan termasuk dalam daerah dengan tipe iklim tropis, dengan nilai Q antara 24-27. Nilai Q adalah perbandingan antara banyaknya bulan basah dibagi dengan bulan kering kali 100%.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Batas Wilayah -->
+                <div class="col-lg-12" data-aos="fade-up">
+                    <div class="info-card">
+                        <h4 class="fw-bold mb-4 text-center">Batas-batas Desa</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center custom-table">
+                                <thead style="background-color: #f8f9fa; color: #333;">
+                                    <tr>
+                                        <th>Arah</th>
+                                        <th>Berbatasan Dengan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold text-danger">Sebelah Utara</td>
+                                        <td>Desa Sendangsari, Kec. Garung</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-danger">Sebelah Selatan</td>
+                                        <td>Desa Kelurahan Andongsili, Kec. Mojotengah</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-danger">Sebelah Barat</td>
+                                        <td>Desa Blederan, Kec. Mojotengah</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-danger">Sebelah Timur</td>
+                                        <td>Desa Kayugiyang dan Desa Lengkong</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Usaha Tani & Infrastruktur -->
+                <div class="row g-4 mb-5">
+                    <!-- Sistem Usaha Tani -->
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="info-card">
+                            <i class="fas fa-tractor info-icon"></i>
+                            <h4 class="fw-bold mb-3">Sistem Usaha Tani</h4>
+                            <p class="content-text mb-3">
+                                Ditinjau dari jenis komoditas yang diusahakan, sistem usaha tani yang ada di Desa Gemblengan dibedakan menjadi empat, yaitu komoditas pertanian seperti jagung dan ketela, komoditas kedua adalah hortikultura seperti cabai, kubis, dll, kelompok ketiga adalah komoditas perkebunan seperti tembakau dan kopi, dan kelompok keempat adalah komoditas hijauan makanan ternak seperti kaliandra, ketela pohon, dan rumput gajah. Ditinjau dari rotasinya, dapat dibedakan menjadi dua yaitu komoditas yang mempunyai rotasi lebih dari satu tahun dan komoditas yang kurang dari satu tahun. Yang dimaksud rotasi di sini adalah jangka waktu tanaman tersebut ditanam sampai tanaman tersebut tidak ekonomis lagi diproduksi.
+                            </p>
+                            <p class="content-text mb-3">
+                                Jenis komoditas pertanian yang ada di desa terdiri dari jagung, cabai (lombok), ubi rambat, ubi kayu, dan sebagian besar adalah tanaman hortikultura dan ketela pohon. Keempat komoditas pertanian tersebut ditanam pada lahan yang sama secara bergiliran sesuai dengan musimnya. Pola pergiliran tanaman ini berlangsung dalam jangka waktu satu tahun. Pada umumnya sayuran, cabai, dan ubi kayu ditanam pada awal musim penghujan (Oktober-November). Hal ini berlaku jika lahan yang ada kekurangan air. Untuk lahan yang mudah mendapatkan air, tidak menggunakan pola pergiliran karena setiap tahunnya hanya ditanami dengan bermacam-macam jenis sayuran saja.
+                            </p>
+                            <p class="content-text mb-0">
+                                Jumlah lahan yang kekurangan air atau biasa disebut tanah kering luasnya selalu meningkat dari tahun ke tahun. Hal ini terjadi karena tekanan jumlah penduduk, sehingga air yang seharusnya masuk ke lahan pertanian lebih banyak digunakan untuk rumah tangga. Hal ini sudah dirasakan oleh penduduk. Dari kondisi seperti inilah sebenarnya keberadaan hutan rakyat mulai berkembang.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Sarana & Prasarana -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-card">
+                            <i class="fas fa-road info-icon"></i>
+                            <h4 class="fw-bold mb-3">Sarana dan Prasarana</h4>
+                            <p class="content-text mb-3">
+                                Sarana perhubungan dengan Jalan Desa sebagai ibukota kecamatan dan jalan Kabupaten sebagai ibukota kabupaten dihubungkan dengan jalan darat dengan konstruksi sebagian jalan beraspal dan sebagian lainnya makadam. Sedangkan dari pusat desa menuju ke seluruh dusun dihubungkan oleh jalan yang diperkeras dengan batu atau makadam, jalan makadam ini cukup bagus karena ditata sedemikian rupa sehingga jalan terasa halus.
+                            </p>
+                            <p class="content-text mb-0">
+                                Keadaan jalan yang sudah beraspal dan adanya mobil angkutan yang masuk mengakibatkan mobilitas dalam kegiatan sehari-hari masyarakat menjadi tinggi, sehingga banyak masyarakat Desa yang melakukan urbanisasi terutama kaum muda. Sebagian besar dari kaum bekerja keluar desa menuju berbagai kota untuk beberapa tahun, setelah itu mereka akan kembali lagi ke desa untuk tinggal menetap. Bagi masyarakat yang bekerja sebagai pedagang, atau yang bekerja keluar kota, merasa sangat terbantu dengan adanya prasarana jalan angkutan ini.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         KONDISI DEMOGRAFI & KEPENDUDUKAN
+         ============================================================ -->
+    <section id="demografi" style="background-color: #fcf9f4; padding: 80px 0;">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="slbl">Kependudukan</span>
+                <h2 class="stitle">Kondisi <span>Demografi</span></h2>
+                <div class="sline mx-auto"></div>
+                <p class="sdesc mx-auto content-text" style="max-width: 800px; text-align: center;">Jumlah penduduk Desa Gemblengan pada awal tahun 2019 ada sebanyak 1.183 Kepala Keluarga (KK) dengan jumlah penduduk 4.304 jiwa, yang terdiri dari 2.231 laki-laki dan 2.073 perempuan. Rata-rata setiap keluarga terdiri dari 3-4 anggota keluarga. Komposisi penduduk menurut umur dan jenis kelamin dapat dilihat pada tabel berikut:</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Tabel Penduduk Menurut Umur -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="info-card">
+                        <h4 class="fw-bold mb-4">Tabel 1. Penduduk Menurut Umur & Jenis Kelamin</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover text-center custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Kelompok Umur (th)</th>
+                                        <th>Laki-laki</th>
+                                        <th>Perempuan</th>
+                                        <th>Jumlah</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>0 - 4</td><td>159</td><td>171</td><td>330</td></tr>
+                                    <tr><td>5 - 9</td><td>243</td><td>231</td><td>474</td></tr>
+                                    <tr><td>10 - 14</td><td>175</td><td>164</td><td>339</td></tr>
+                                    <tr><td>15 - 19</td><td>161</td><td>166</td><td>327</td></tr>
+                                    <tr><td>20 - 24</td><td>165</td><td>168</td><td>333</td></tr>
+                                    <tr><td>25 - 29</td><td>163</td><td>167</td><td>330</td></tr>
+                                    <tr><td>30 - 39</td><td>163</td><td>145</td><td>308</td></tr>
+                                    <tr><td>40 - 49</td><td>136</td><td>156</td><td>292</td></tr>
+                                    <tr><td>50 - 59</td><td>152</td><td>119</td><td>271</td></tr>
+                                    <tr><td>> 60</td><td>651</td><td>649</td><td>1.300</td></tr>
+                                    <tr class="fw-bold" style="background-color: #ffe6e6;">
+                                        <td>Jumlah</td>
+                                        <td>2.168</td>
+                                        <td>2.136</td>
+                                        <td>4.304</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="content-text mt-3" style="font-size: 0.95rem;">
+                            Dari tabel di atas dapat diamati bahwa golongan usia produktif berjumlah 2.441 jiwa (60%) dan golongan usia tidak produktif berjumlah 1.863 jiwa (40%). Kenyataan ini menunjukkan bahwa tenaga kerja yang tersedia di Desa Gemblengan bisa mengisi peluang kerja, sementara itu lapangan kerja yang tersedia sebagian besar adalah di bidang pertanian, termasuk peternakan dan perikanan, serta kehutanan karena lahan pertanian cukup tersedia. Keadaan tanah cukup subur.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tabel Pendidikan -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="info-card">
+                        <h4 class="fw-bold mb-4">Tabel 2. Jumlah Penduduk Menurut Tingkat Pendidikan</h4>
+                        <p class="content-text mb-3" style="font-size: 0.95rem;">Tingkat pendidikan di Desa Gemblengan tergolong rendah, hal ini disebabkan fasilitas pendidikan kurang memadai. Fasilitas pendidikan di Desa Gemblengan meliputi dua buah gedung Sekolah Dasar dan satu buah Madrasah Ibtidaiyah, satu buah Taman Kanak-kanak, dan satu buah RA. Sebagian besar penduduk Desa Gemblengan adalah tamatan Sekolah Dasar yaitu sebanyak 2.404 orang, dan urutan kedua adalah penduduk yang belum tamat SD sebanyak 513 orang. Penduduk yang sedang sekolah sebanyak 600 orang menempati urutan ketiga, dan urutan keempat adalah penduduk yang tamat SMP sebanyak 454 orang serta yang tamat SLTA sebanyak 303 orang, dan yang tamat Akademi/Perguruan Tinggi sebanyak 24 orang. Komposisi penduduk Desa Gemblengan berdasarkan tingkat pendidikannya dapat dilihat pada tabel berikut:</p>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Tingkat Pendidikan</th>
+                                        <th class="text-end">Jumlah</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Tamat Akademi/PT</td><td class="text-end">24 Orang</td></tr>
+                                    <tr><td>Tamat SLTA</td><td class="text-end">303 Orang</td></tr>
+                                    <tr><td>Tamat SLTP</td><td class="text-end">454 Orang</td></tr>
+                                    <tr><td>Tamat SD</td><td class="text-end">2.404 Orang</td></tr>
+                                    <tr><td>Belum Tamat SD</td><td class="text-end">513 Orang</td></tr>
+                                    <tr><td>Tidak Sekolah</td><td class="text-end">6 Orang</td></tr>
+                                    <tr><td>Yang Sedang Sekolah</td><td class="text-end">600 Orang</td></tr>
+                                    <tr class="fw-bold" style="background-color: #ffe6e6;">
+                                        <td>Total</td>
+                                        <td class="text-end">4.304 Orang</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOSIAL EKONOMI & PENGGUNAAN LAHAN
+         ============================================================ -->
+    <section id="sosial-ekonomi" class="pb-5 pt-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="slbl">Kesejahteraan & Lahan</span>
+                <h2 class="stitle">Keadaan Sosial <span>Ekonomi</span></h2>
+                <div class="sline mx-auto"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Tabel Penggunaan Lahan & Ternak -->
+                <div class="col-lg-5" data-aos="fade-up">
+                    <div class="info-card mb-4">
+                        <h4 class="fw-bold mb-4">Tabel 4. Luas dan Penggunaan Lahan</h4>
+                        <p class="content-text mb-3" style="font-size: 0.95rem;">Luas desa secara keseluruhan sebesar 223,570 Ha. Hal tersebut dapat dilihat dari luas lahan untuk kegiatan pertanian, yaitu sawah sebanyak 10.390 Ha dan tanah kering seluas 182,710 Ha. Sedangkan untuk hutan 0 Ha. Lahan yang digunakan untuk kuburan seluas 3 Ha, lapangan seluas 1/3 Ha, jalan seluas 6 Ha, dan pemukiman/perumahan seluas 30,5 Ha. Perincian masing-masing penggunaan lahan di Desa Gemblengan dapat dilihat pada tabel berikut:</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered custom-table">
+                                <tbody>
+                                    <tr><td>Tanah Sawah</td><td class="text-end fw-bold text-success">10.390 Ha</td></tr>
+                                    <tr><td>Tanah Kering</td><td class="text-end fw-bold text-success">185.400 Ha</td></tr>
+                                    <tr><td>Tanah Pekarangan</td><td class="text-end fw-bold text-success">10.330 Ha</td></tr>
+                                    <tr><td>Lain-lain</td><td class="text-end fw-bold text-success">17.150 Ha</td></tr>
+                                    <tr><td>Hutan Negara</td><td class="text-end fw-bold text-success">0 Ha</td></tr>
+                                    <tr class="fw-bold" style="background-color: #e8f5e9;">
+                                        <td>Total Luas</td>
+                                        <td class="text-end">223.570 Ha</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4 class="fw-bold mb-4">Tabel 5. Jumlah Ternak</h4>
+                        <p class="content-text mb-3" style="font-size: 0.95rem;">Selain bekerja sebagai petani, pada umumnya penduduk juga memelihara ternak. Pilihan pemeliharaan ternak ditujukan sebagai tabungan hidup, juga memanfaatkan lahan negara yang sebagian besar merupakan ladang rumput, sehingga hijauan pakan ternak sangat mudah didapat. Jenis ternak yang dipelihara adalah kambing, sapi, kerbau, dan ayam/angsa. Pemeliharaan ternak oleh para petani sifatnya hanya berupa pekerjaan sambilan, bukan sebagai pekerjaan pokok. Hijauan makanan ternak (HMT) diperoleh dari pekarangan, tegalan, dan sebagian besar dari hutan milik Perhutani. Jumlah populasi ternak dapat dilihat pada tabel berikut:</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered custom-table text-center">
+                                <thead style="background-color: #f8f9fa; color: #333;">
+                                    <tr>
+                                        <th>Kepemilikan Ternak</th>
+                                        <th>Jumlah</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Sapi</td><td>6 ekor</td></tr>
+                                    <tr><td>Kambing/Domba</td><td>1.123 ekor</td></tr>
+                                    <tr><td>Ayam Kampung</td><td>871 ekor</td></tr>
+                                    <tr><td>Angsa</td><td>0 ekor</td></tr>
+                                    <tr><td>Itik</td><td>123 ekor</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabel Mata Pencaharian -->
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card">
+                        <h4 class="fw-bold mb-3">Tabel 3. Penduduk Menurut Mata Pencaharian</h4>
+                        <p class="content-text mb-4" style="font-size: 0.95rem;">Sebagian besar keluarga di Desa Gemblengan mempunyai mata pencaharian di bidang pertanian. Menurut catatan monografi Desa tahun 2018, jumlah kepala keluarga yang bekerja di bidang pertanian sebanyak 1.479 orang, sedangkan yang tidak teridentifikasi sebanyak 676 orang, dan sisanya bekerja di bidang lain seperti pengusaha, buruh, pedagang, pengangkutan, dan sebagainya. Untuk lebih jelasnya dapat dilihat pada tabel berikut:</p>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table">
+                                <thead style="background-color: #e74c3c; color: white;">
+                                    <tr>
+                                        <th>Mata Pencaharian</th>
+                                        <th class="text-end">Jumlah</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Petani</td><td class="text-end">821 Orang</td></tr>
+                                    <tr><td>Buruh Tani</td><td class="text-end">658 Orang</td></tr>
+                                    <tr><td>PNS</td><td class="text-end">6 Orang</td></tr>
+                                    <tr><td>Karyawan Swasta</td><td class="text-end">13 Orang</td></tr>
+                                    <tr><td>Buruh Harian Lepas</td><td class="text-end">876 Orang</td></tr>
+                                    <tr><td>Pedagang</td><td class="text-end">55 Orang</td></tr>
+                                    <tr><td>Tukang Batu</td><td class="text-end">14 Orang</td></tr>
+                                    <tr><td>Tukang Kayu</td><td class="text-end">21 Orang</td></tr>
+                                    <tr><td>Tukang Cukur</td><td class="text-end">3 Orang</td></tr>
+                                    <tr><td>Pembantu Rumah Tangga</td><td class="text-end">36 Orang</td></tr>
+                                    <tr><td>Tidak Mempunyai Pekerjaan Tetap</td><td class="text-end">271 Orang</td></tr>
+                                    <tr><td>Tukang Sol Sepatu</td><td class="text-end">3 Orang</td></tr>
+                                    <tr><td>Mengurus Rumah Tangga</td><td class="text-end">48 Orang</td></tr>
+                                    <tr><td>Ustadz/Kyai</td><td class="text-end">36 Orang</td></tr>
+                                    <tr><td>Perangkat Desa</td><td class="text-end">13 Orang</td></tr>
+                                    <tr><td>Guru</td><td class="text-end">11 Orang</td></tr>
+                                    <tr><td>Pengemudi</td><td class="text-end">9 Orang</td></tr>
+                                    <tr><td>Peternak</td><td class="text-end">29 Orang</td></tr>
+                                    <tr><td>Tukang Ojek</td><td class="text-end">21 Orang</td></tr>
+                                    <tr><td>Yang Belum Bekerja</td><td class="text-end">1.360 Orang</td></tr>
+                                    <tr class="fw-bold" style="background-color: #ffe6e6;">
+                                        <td>Total</td>
+                                        <td class="text-end">4.304 Orang</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="container">
+           <div class="row g-5">
+              <div class="col-lg-4">
+                 <div class="fnm">Web<span>Desa</span></div>
+                 <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                 <div class="ftit">Layanan Spasial</div>
+                 <ul class="flinks ps-0">
+                    <li><a href="Peta_Interaktif.html"><i class="fas fa-chevron-right"></i> Galeri Peta Interaktif</a></li>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda Website</a></li>
+                 </ul>
+              </div>
+              <div class="col-lg-4">
+                 <div class="ftit">Kontak Kami</div>
+                 <div class="fci">
+                    <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="fciinfo"><strong>Alamat</strong>Balai Desa, Kabupaten Wonosobo</div>
+                 </div>
+                 <div class="fci">
+                    <div class="fciico"><i class="fas fa-envelope"></i></div>
+                    <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="fbot">
+           <div class="container">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                 <p>&copy; 2026 <span>Pemerintah Desa</span>. All Rights Reserved.</p>
+              </div>
+           </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

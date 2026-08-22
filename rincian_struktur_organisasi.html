@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Rincian Bagan Struktur Organisasi dan Aparatur Desa Gemblengan">
+      <title>Struktur Organisasi - Web Desa Gemblengan</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link active" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                        <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                        <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="peta_interaktif.html">Peta Desa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="rincian_struktur_organisasi.html">Aparatur</a></li>
+                  <li class="nav-item"><a class="nav-link" href="apbdes.html">Transparansi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Kontak</a></li>
+               </ul>
+               <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <!-- PENTING: Ganti tulisan 'nama-logo-anda.png' dengan nama file logo Anda yang sebenarnya -->
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kanan" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+            </div>
+         </div>
+      </nav>
+
+      <!-- ============================================================
+         PAGE HEADER
+         ============================================================ -->
+      <section class="page-title-section" style="background: #f8f9fa; padding: 60px 0; border-bottom: 1px solid #eee;">
+         <div class="container text-center">
+            <h1 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #2b2b2b;">Struktur Organisasi</h1>
+            <p style="color: #666; font-family: 'Poppins', sans-serif;">Susunan Organisasi dan Tata Kerja Pemerintah Desa Gemblengan, Kecamatan Garung, Kabupaten Wonosobo</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         BAGAN STRUKTUR LENGKAP
+         ============================================================ -->
+      <section style="background-color: #ffffff; padding: 60px 0;">
+         
+         <style>
+            /* CSS Khusus untuk Bagan Lengkap */
+            .chart-wrapper {
+               overflow-x: auto; /* Agar responsif bisa digeser di HP */
+               padding: 20px 0 60px 0;
+            }
+            .chart-container {
+               position: relative;
+               width: 1500px; /* Diperlebar agar kotak tidak berdempetan */
+               height: 550px;
+               margin: 0 auto;
+               font-family: 'Poppins', sans-serif;
+            }
+            .org-box {
+               width: 180px;
+               position: absolute;
+               transform: translateX(-50%);
+               z-index: 2;
+               border: 2px solid #e63946;
+               border-radius: 6px;
+               box-shadow: 0 4px 10px rgba(230, 57, 70, 0.15);
+               background: #fff;
+               overflow: hidden;
+               transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .org-box:hover {
+               transform: translate(-50%, -4px);
+               box-shadow: 0 8px 16px rgba(230, 57, 70, 0.3);
+            }
+            .org-box-head {
+               background: #e63946;
+               color: #fff;
+               font-size: 11px;
+               font-weight: 600;
+               text-align: center;
+               padding: 8px 6px;
+               min-height: 45px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-bottom: 1px solid #c72935;
+               line-height: 1.2;
+            }
+            .org-box-body {
+               color: #2b2b2b;
+               font-size: 13px;
+               font-weight: 700;
+               text-align: center;
+               padding: 10px 4px;
+               min-height: 45px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            .org-line {
+               background: #2b2b2b;
+               position: absolute;
+               z-index: 1;
+            }
+         </style>
+
+         <div class="container-fluid px-4">
+            <div class="chart-wrapper">
+               
+               <div class="chart-container" data-aos="fade-up">
+                  
+                  <!-- GARIS UTAMA (Menghubungkan Kades sampai ke bawah/Kadus) -->
+                  <!-- Top = 80px, Height = 320px (Turun sampai 400px), Posisi Tengah = 750px -->
+                  <div class="org-line" style="left: 750px; top: 80px; width: 2px; height: 320px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 1: KEPALA DESA ================= -->
+                  <div class="org-box" style="left: 750px; top: 0;">
+                     <div class="org-box-head">KEPALA DESA</div>
+                     <div class="org-box-body">YUNANTO NUGROHO Z.(Penanggung Jawab)</div>
+                  </div>
+
+                  <!-- ================= PENGHUBUNG SEKDES ================= -->
+                  <!-- Garis Mendatar ke Sekdes -->
+                  <div class="org-line" style="left: 750px; top: 100px; width: 330px; height: 2px;"></div>
+                  <!-- Garis Turun ke Sekdes -->
+                  <div class="org-line" style="left: 1080px; top: 100px; width: 2px; height: 20px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 2: SEKRETARIS DESA ================= -->
+                  <div class="org-box" style="left: 1080px; top: 120px;">
+                     <div class="org-box-head">SEKRETARIS DESA</div>
+                     <div class="org-box-body">MUNIR</div>
+                  </div>
+
+                  <!-- ================= PENGHUBUNG SEKSI (KIRI) ================= -->
+                  <!-- Garis Mendatar Seksi (Diperpanjang menjadi 550px agar menyambung ke garis utama di 750px) -->
+                  <div class="org-line" style="left: 200px; top: 230px; width: 550px; height: 2px;"></div>
+                  <!-- Garis Turun ke masing-masing Seksi -->
+                  <div class="org-line" style="left: 200px; top: 230px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 420px; top: 230px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 640px; top: 230px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 3 KIRI: KEPALA SEKSI ================= -->
+                  <div class="org-box" style="left: 200px; top: 260px;">
+                     <div class="org-box-head">KEPALA SEKSI<br>PEMERINTAHAN</div>
+                     <div class="org-box-body">TIKA ASTRIANI</div>
+                  </div>
+                  <div class="org-box" style="left: 420px; top: 260px;">
+                     <div class="org-box-head">KEPALA SEKSI<br>KESEJAHTERAAN</div>
+                     <div class="org-box-body">MAHIDI DADIYO</div>
+                  </div>
+                  <div class="org-box" style="left: 640px; top: 260px;">
+                     <div class="org-box-head">KEPALA SEKSI<br>PELAYANAN</div>
+                     <div class="org-box-body">Z. FAIZAH</div>
+                  </div>
+
+                  <!-- ================= PENGHUBUNG KAUR (KANAN) ================= -->
+                  <!-- Garis Turun dari Sekdes -->
+                  <div class="org-line" style="left: 1080px; top: 210px; width: 2px; height: 20px; transform: translateX(-50%);"></div>
+                  <!-- Garis Mendatar Kaur -->
+                  <div class="org-line" style="left: 860px; top: 230px; width: 440px; height: 2px;"></div>
+                  <!-- Garis Turun ke masing-masing Kaur -->
+                  <div class="org-line" style="left: 860px; top: 230px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 1080px; top: 230px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 1300px; top: 230px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 3 KANAN: KEPALA URUSAN ================= -->
+                  <div class="org-box" style="left: 860px; top: 260px;">
+                     <div class="org-box-head">KEPALA URUSAN<br>TATA USAHA DAN UMUM</div>
+                     <div class="org-box-body">-</div>
+                  </div>
+                  <div class="org-box" style="left: 1080px; top: 260px;">
+                     <div class="org-box-head">KEPALA URUSAN<br>PERENCANAAN</div>
+                     <div class="org-box-body">EVI DIANA T.S.</div>
+                  </div>
+                  <div class="org-box" style="left: 1300px; top: 260px;">
+                     <div class="org-box-head">KEPALA URUSAN<br>KEUANGAN</div>
+                     <div class="org-box-body">NGADIMIN</div>
+                  </div>
+
+                  <!-- ================= PENGHUBUNG KADUS (BAWAH) ================= -->
+                  <!-- Garis Mendatar Kadus -->
+                  <div class="org-line" style="left: 270px; top: 400px; width: 960px; height: 2px;"></div>
+                  <!-- Garis Turun ke masing-masing Kadus -->
+                  <div class="org-line" style="left: 270px; top: 400px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 510px; top: 400px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 750px; top: 400px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 990px; top: 400px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 1230px; top: 400px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 4: KEPALA DUSUN ================= -->
+                  <div class="org-box" style="left: 270px; top: 430px; border-color: #4a9c40;">
+                     <div class="org-box-head" style="background: #4a9c40; border-bottom-color: #3b7c33;">KEPALA DUSUN<br>GEMBLENGAN</div>
+                     <div class="org-box-body">DWIYANTO</div>
+                  </div>
+                  <div class="org-box" style="left: 510px; top: 430px; border-color: #4a9c40;">
+                     <div class="org-box-head" style="background: #4a9c40; border-bottom-color: #3b7c33;">KEPALA DUSUN<br>GAJIHAN</div>
+                     <div class="org-box-body">SULASTRI</div>
+                  </div>
+                  <div class="org-box" style="left: 750px; top: 430px; border-color: #4a9c40;">
+                     <div class="org-box-head" style="background: #4a9c40; border-bottom-color: #3b7c33;">KEPALA DUSUN<br>BEDILON</div>
+                     <div class="org-box-body">MAKINIS</div>
+                  </div>
+                  <div class="org-box" style="left: 990px; top: 430px; border-color: #4a9c40;">
+                     <div class="org-box-head" style="background: #4a9c40; border-bottom-color: #3b7c33;">KEPALA DUSUN<br>KASIMAN</div>
+                     <div class="org-box-body">TUYASIN</div>
+                  </div>
+                  <div class="org-box" style="left: 1230px; top: 430px; border-color: #4a9c40;">
+                     <div class="org-box-head" style="background: #4a9c40; border-bottom-color: #3b7c33;">KEPALA DUSUN<br>GESING</div>
+                     <div class="org-box-body">MAT ARIF</div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa Gemblengan</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Akses Cepat</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#hero"><i class="fas fa-chevron-right"></i>Beranda</a></li>
+                     <li><a href="index.html#about"><i class="fas fa-chevron-right"></i>Profil Desa</a></li>
+                     <li><a href="index.html#menu"><i class="fas fa-chevron-right"></i>Potensi Desa</a></li>
+                     <li><a href="peta_interaktif.html"><i class="fas fa-chevron-right"></i>Peta Spasial (WebGIS)</a></li>
+                     <li><a href="index.html#blog"><i class="fas fa-chevron-right"></i>Berita Desa</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Layanan Warga</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#reservation"><i class="fas fa-chevron-right"></i>Pengajuan Surat</a></li>
+                     <li><a href="index.html#contact-section"><i class="fas fa-chevron-right"></i>Lapor/Aduan</a></li>
+                     <li><a href="index.html#chefs"><i class="fas fa-chevron-right"></i>Data Aparatur</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa, Kabupaten Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Telepon</strong>+62 812-3456-7890</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa Gemblengan</span>. All Rights Reserved.</p>
+                  <div><a href="#">Kebijakan Privasi</a><a href="#">Transparansi Anggaran</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+      <!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- Magnific Popup -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Katalog Potensi Desa Gemblengan - Budaya, Kuliner, Kerajinan, dan Pertanian">
+      <title>Potensi Desa Gemblengan - Web Desa</title>
+      
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+      
+      <!-- CSS Assets -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <link href="css/aos.css" rel="stylesheet"/>
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <link rel="stylesheet" href="css/style.css" />
+
+      <style>
+         /* Mencegah blinking akibat benturan animasi AOS dengan lebar layar */
+         body {
+             overflow-x: hidden; 
+         }
+
+         .inner-page-header {
+             padding: 160px 0 80px;
+             background: linear-gradient(rgba(13, 15, 19, 0.85), rgba(13, 15, 19, 0.95)), url('img/banner-img.jpg') center/cover fixed;
+             text-align: center;
+         }
+         
+         /* Styling Khusus Kartu Potensi Kuliner */
+         .potensi-card {
+             background: #fff;
+             border: 1px solid #f0f0f0;
+             border-radius: 15px;
+             overflow: hidden;
+             height: 100%;
+             transition: all 0.3s ease;
+             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+         }
+         .potensi-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 15px 35px rgba(220, 53, 69, 0.15);
+             border-color: rgba(220, 53, 69, 0.2);
+         }
+         .potensi-img {
+             width: 100%;
+             height: 220px;
+             object-fit: cover;
+             background-color: #e9ecef;
+         }
+         .potensi-tag {
+             background-color: #d32f2f;
+             color: #fff;
+             padding: 4px 12px;
+             border-radius: 50px;
+             font-size: 0.8rem;
+             font-weight: 600;
+             display: inline-block;
+             margin-bottom: 15px;
+         }
+         
+         /* Pembatas Antar Seksi */
+         .section-divider {
+             border-top: 2px dashed #eaeaea;
+             margin: 60px 0;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+       <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="#">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
+                  <!-- Dropdown Profil Desa -->
+                    <li class="nav-item dropdown">
+                       <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href=this.href;">
+                          Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                       </a>
+                       <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                          <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                          <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                       </ul>
+                    </li>
+      
+                  <!-- Dropdown Potensi Dusun (Dari penyesuaian sebelumnya) -->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+      
+                  <!-- MENU BARU: Peta Desa (Mengarah ke WebGIS) -->
+                  <li class="nav-item"><a class="nav-link" href="peta_interaktif.html">Peta Desa</a></li>
+      
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="rincian_struktur_organisasi.html">Aparatur</a></li>
+      
+                  <!-- Menu yang tadinya Layanan diubah menjadi Transparansi (Dari penyesuaian sebelumnya) -->
+                  <li class="nav-item"><a class="nav-link" href="apbdes.html">Transparansi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contact-section">Kontak</a></li>
+               </ul>
+   
+               <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <!-- PENTING: Ganti tulisan 'nama-logo-anda.png' dengan nama file logo Anda yang sebenarnya -->
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kanan" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+         </div>
+      </nav>
+
+      <!-- ============================================================
+         HEADER HALAMAN DALAM
+         ============================================================ -->
+      <section class="inner-page-header">
+         <div class="container">
+             <span class="slbl" style="color: #d32f2f; font-weight: 600; background: rgba(255,255,255,0.9); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px;">Karya & Kekayaan Alam</span>
+             <h1 class="htitle text-white mb-3">Potensi <span>Desa Gemblengan</span></h1>
+             <p class="hdesc text-white mx-auto" style="max-width: 700px;">Jelajahi ragam kekayaan lokal mulai dari pesona budaya tradisional, kelezatan kuliner khas, kreativitas kerajinan tangan, hingga melimpahnya hasil bumi pertanian.</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         1. POTENSI PERTANIAN
+         ============================================================ -->
+      <section id="pertanian" class="py-5" style="background-color: #ffffff;">
+         <div class="container mt-4">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="border: 5px solid #fff; background-color: #e9ecef;">
+                      <img src="img/tanaman2.jpeg" alt="Pertanian Hortikultura Gemblengan" class="w-100" style="height: 400px; object-fit: cover;">
+                      <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                          <h5 class="text-white mb-0"><i class="fas fa-leaf text-success me-2"></i> Penggerak Ekonomi Desa</h5>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <span class="slbl">Sektor Agraris</span>
+                  <h2 class="stitle text-start mb-4">Pertanian <span>Hortikultura</span></h2>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Desa Gemblengan memiliki potensi yang sangat besar di bidang pertanian khususnya pada tanaman holtikultura karena letaknya yang berada di 1100 mdpl.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Berada di lereng pegunungan dengan tanah yang subur dan ketersediaan air yang melimpah, <strong>sektor pertanian hortikultura</strong> menjadi tulang punggung perekonomian warga. Potensi ini tersebar secara merata di <strong>seluruh dusun</strong> di wilayah Desa Gemblengan.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Masyarakat secara aktif mengelola lahan terasering untuk membudidayakan berbagai komoditas sayuran bernilai ekonomi tinggi. Beberapa hasil bumi yang menjadi komoditas unggulan desa antara lain adalah <strong>cabai, tomat, dan jagung</strong>, yang mampu memenuhi kebutuhan pasar lokal maupun luar kabupaten.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Iklim dengan suhu yang rendah dan tingkat kelembaban yang tinggi sehingga sangat cocok untuk pertanian hortikultura. Hasil hortikultura yang dominan di Desa Gemblengan yaitu buncis, tomat, cabai, kentang, kubis dan sawi.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <div class="container"><div class="section-divider"></div></div>
+
+      <!-- ============================================================
+         2. POTENSI BUDAYA (TARI LENGGER)
+         ============================================================ -->
+      <section id="budaya" class="py-5" style="background-color: #fcf9f4;">
+         <div class="container">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="row g-3">
+                      <div class="col-6">
+                          <div style="background-color: #e9ecef; height: 220px; border-radius: 8px; overflow: hidden; margin-bottom: 1rem;">
+                              <img src="img/lengger.JPG" alt="Tari Lengger Dewasa" class="w-100 h-100" style="object-fit: cover;">
+                          </div>
+                      </div>
+                      <div class="col-6 mt-4">
+                          <div style="background-color: #e9ecef; height: 220px; border-radius: 8px; overflow: hidden;">
+                              <img src="img/lengger2.png" alt="Tari Lengger Anak" class="w-100 h-100" style="object-fit: cover;">
+                          </div>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-lg-6" data-aos="fade-right">
+                  <span class="slbl">Kearifan Lokal</span>
+                  <h2 class="stitle text-start mb-4">Kesenian <span>Tari Topeng (Lengger)</span></h2>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Desa Gemblengan tidak hanya kaya akan hasil alam, tetapi juga memegang teguh warisan leluhur. <strong>Tari Lengger</strong>, kesenian tradisional kebanggaan Wonosobo, masih terus hidup dan dilestarikan oleh kelompok-kelompok seni, khususnya di wilayah <strong>Dusun Bedilon dan Dusun Kasiman</strong>.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Tari Lengger Dieng (Tari Topeng) merupakan salah satu kesenian Khas daerah Dieng Wonosobo dimana setiap acara pekan budaya selalu ada. Tari lengger diiringi oleh musik tradisional gamelan yang ditarikan oleh pria dan wanita. *Tari Lengger* adalah salah satu tarian yang di mainkan oleh seorang laki - laki dan seorang perempuan. Tarian ini merupakan pengembangan dari tarian sebelumnya yaitu *tari Tayub*.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Tari Lengger juga merupakan salah satu tarian klasik yang sudah ada sejak jaman dahulu hingga sekarang. Nama Tari Lengger di ambil dari kata “le” yang berarti anak laki-laki dan kata “*ger*” yang berarti *geger* atau *ramai*. Karena banyaknya penonton laki-laki yang hadir dalam setiap pertunjukannya.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Tarian ini dulunya dianggap negatif karena gerakan dan adegan dalam tarian ini dianggap mengundang birahi. Selain itu juga tidak jarang para penonton yang ikut menari sambil mabuk. Namun tarian ini telah berhasil di ubah oleh *Sunan Kalijaga* dan menjadikan tarian ini sebagai sarana dakwah dan disisipkan ajaran untuk selalu mengingat Tuhan.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Sehingga banyak juga yang mengatakan nama lengger di ambil dari kata “*eleng/eling*” yang berarti *ingat* dan “*ngger*” yang berarti *nak* (sebutan untuk seorang anak). Sehingga dapat di artikan menjadi “**ingatlah nak**” yaitu seruan untuk mengingat pada kebaikan dan mengingat kebesaran Tuhan. Kesenian ini dapat dijumpai di dusun Bedilon, Kasiman, dan versi anak-anak di dusun Gajihan.
+                  </p>
+                  <div class="p-4 rounded-3 mt-4" style="background-color: #fff; border-left: 4px solid #f39c12; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                     <h5 class="mb-2" style="color: #2b2b2b;"><i class="fas fa-child text-warning me-2"></i> Lengger Anak-Anak di Gajihan</h5>
+                     <p class="mb-0" style="color: #666; line-height: 1.6;">
+                        Sebagai bentuk regenerasi budaya, <strong>Dusun Gajihan</strong> memiliki keunikan tersendiri dengan hadirnya kelompok penari <strong>Lengger Anak-anak</strong>. Antusiasme generasi muda ini menjadi bukti nyata bahwa kesenian tradisional tidak akan lekang tergerus zaman di Desa Gemblengan.
+                     </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <div class="container"><div class="section-divider"></div></div>
+
+      <!-- ============================================================
+         3. POTENSI KERAJINAN BAMBU
+         ============================================================ -->
+      <section id="kerajinan" class="py-5" style="background-color: #ffffff;">
+         <div class="container">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="border: 5px solid #fff; background-color: #e9ecef;">
+                      <img src="img/rigen_bambu.png" alt="Kerajinan Rigen Bambu" class="w-100" style="height: 400px; object-fit: cover;">
+                      <div class="position-absolute top-0 end-0 p-3">
+                          <span class="badge bg-danger fs-6 px-3 py-2 rounded-pill shadow"><i class="fas fa-star text-warning me-1"></i> Sentra Dusun Gesing</span>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <span class="slbl">Industri Kreatif Warga</span>
+                  <h2 class="stitle text-start mb-4">Kerajinan <span>Bambu</span></h2>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Melimpahnya pohon bambu di sekitar desa dimanfaatkan dengan sangat baik oleh tangan-tangan terampil warga, khususnya yang terpusat di kawasan <strong>Dusun Gesing</strong>. Warga mengubah bambu menjadi produk kerajinan anyaman yang fungsional dan bernilai jual.
+                  </p>
+                  <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                     Produk unggulan dari kerajinan ini adalah <strong>Rigen</strong>. Rigen merupakan lembaran anyaman bambu berbentuk persegi panjang yang secara khusus difungsikan oleh para petani sebagai <strong>wadah atau alas untuk menjemur daun tembakau</strong>. Kerajinan ini tidak hanya memenuhi kebutuhan petani lokal, tetapi juga dipasok ke wilayah pertanian tembakau di luar desa.
+                  </p>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         4. POTENSI KULINER KHAS
+         ============================================================ -->
+      <section id="kuliner" class="py-5 mt-5" style="background-color: #f8f9fa;">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Cita Rasa Desa</span>
+               <h2 class="stitle">Kelezatan <span>Kuliner Lokal</span></h2>
+               <div class="sline mx-auto"></div>
+               <p class="sdesc mx-auto mt-3" style="max-width: 650px;">
+                  Sektor UMKM rumahan masyarakat Gemblengan terus berinovasi menghasilkan berbagai macam penganan ringan (snack) tradisional yang gurih, renyah, dan sangat cocok dijadikan buah tangan.
+               </p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+               
+               <!-- Kuliner 1: Opak -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="potensi-card">
+                     <img src="img/opak.png" alt="Opak Singkong" class="potensi-img">
+                     <div class="p-4">
+                        <span class="potensi-tag">Cemilan Gurih</span>
+                        <h4 class="fw-bold mb-3" style="color: #2b2b2b;">Opak</h4>
+                        <p class="text-muted" style="line-height: 1.6;">
+                           Cemilan tradisional berbahan dasar singkong (ubi kayu) yang dipipihkan dan dijemur sebelum digoreng. Menghasilkan tekstur yang sangat renyah dengan cita rasa gurih yang khas, menjadi camilan favorit menemani teh hangat di sore hari.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Kuliner 2: Keripik Talas -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="potensi-card">
+                     <img src="img/kripik_talas.png" alt="Keripik Talas" class="potensi-img">
+                     <div class="p-4">
+                        <span class="potensi-tag">Olahan Hasil Bumi</span>
+                        <h4 class="fw-bold mb-3" style="color: #2b2b2b;">Keripik Talas</h4>
+                        <p class="text-muted" style="line-height: 1.6;">
+                           Memanfaatkan melimpahnya tanaman umbi-ubian di lereng desa, warga memproduksi Keripik Talas berkualitas. Diiris tipis dan digoreng dengan bumbu rempah pilihan, menciptakan perpaduan rasa gurih alami yang bikin ketagihan.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Kuliner 3: Petos -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="potensi-card">
+                     <img src="img/tempe_atos.png" alt="Petos Tempe Kemul Atos" class="potensi-img">
+                     <div class="p-4">
+                        <span class="potensi-tag">Ikon Wonosobo</span>
+                        <h4 class="fw-bold mb-3" style="color: #2b2b2b;">Petos (Tempe Kemul Atos)</h4>
+                        <p class="text-muted" style="line-height: 1.6;">
+                           Inovasi cerdas dari kuliner legendaris Wonosobo, Tempe Kemul. "Petos" dibuat dengan balutan tepung berbumbu kucai yang digoreng jauh lebih garing (*atos*) hingga menjadi keripik. Sangat tahan lama sehingga cocok untuk oleh-oleh.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Akses Cepat</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#hero"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                     <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> Profil Desa</a></li>
+                     <li><a href="index.html#menu"><i class="fas fa-chevron-right"></i> Info Dusun</a></li>
+                     <li><a href="peta_interaktif.html"><i class="fas fa-chevron-right"></i> Peta Spasial</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Layanan Warga</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#transparansi"><i class="fas fa-chevron-right"></i> Transparansi</a></li>
+                     <li><a href="index.html#contact-section"><i class="fas fa-chevron-right"></i> Lapor/Aduan</a></li>
+                     <li><a href="rincian_struktur_organisasi.html"><i class="fas fa-chevron-right"></i> Data Aparatur</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa Gemblengan, Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Telepon</strong>+62 812-3456-7890</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa Gemblengan</span>. All Rights Reserved.</p>
+                  <div><a href="#">Kebijakan Privasi</a><a href="#">Transparansi Anggaran</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+      <!-- Script Template & Bootstrap -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/swiper-bundle.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>

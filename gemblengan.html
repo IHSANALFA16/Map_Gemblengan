@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Profil dan Potensi Dusun Gemblengan">
+      <title>Dusun Gemblengan - Web Desa</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+
+      <style>
+         .inner-page-header {
+             padding: 160px 0 80px;
+             background: linear-gradient(rgba(13, 15, 19, 0.8), rgba(13, 15, 19, 0.9)), url('img/menu/1.jpg') center/cover;
+             text-align: center;
+         }
+         .fasum-card {
+             background: #fff;
+             border: 1px solid #eaeaea;
+             border-radius: 12px;
+             padding: 20px;
+             height: 100%;
+             transition: all 0.3s ease;
+             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+         }
+         .fasum-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 10px 25px rgba(220, 53, 69, 0.1);
+             border-color: rgba(220, 53, 69, 0.3);
+         }
+         .fasum-icon {
+             width: 50px;
+             height: 50px;
+             background: rgba(220, 53, 69, 0.1);
+             color: #d32f2f;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 1.3rem;
+             margin-bottom: 15px;
+         }
+         .fasum-list {
+             list-style: none;
+             padding: 0;
+             margin: 0;
+         }
+         .fasum-list li {
+             padding: 8px 0;
+             border-bottom: 1px dashed #eee;
+             display: flex;
+             align-items: center;
+             gap: 10px;
+             font-size: 0.95rem;
+             color: #555;
+         }
+         .fasum-list li:last-child {
+             border-bottom: none;
+         }
+         .fasum-list li i {
+             color: #d32f2f;
+             font-size: 0.85rem;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+                  
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href=this.href;">
+                        Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                        <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                        <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                     </ul>
+                  </li>
+      
+                  <li class="nav-item dropdown">
+                     <a class="nav-link active" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Potensi Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item active" href="potensi-gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="potensi-bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="potensi-gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="potensi-gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="potensi-kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+      
+                  <li class="nav-item"><a class="nav-link" href="peta_interaktif.html">Peta Desa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#gallery">Budaya</a></li>
+                  <li class="nav-item"><a class="nav-link" href="rincian_struktur_organisasi.html">Aparatur</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#transparansi">Transparansi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Kontak</a></li>
+               </ul>
+   
+               <div class="d-flex align-items-center gap-1">
+                  <button id="navSearchBtn" title="Cari Informasi"><i class="fas fa-search"></i></button>
+               </div>
+            </div>
+         </div>
+      </nav>
+
+      <!-- ============================================================
+         HEADER HALAMAN DALAM
+         ============================================================ -->
+      <section class="inner-page-header">
+         <div class="container">
+             <h1 class="htitle text-white mb-3">Dusun <span>Gemblengan</span></h1>
+             <p class="hdesc text-white mx-auto" style="max-width: 600px;">Pusat pemerintahan dan kegiatan ekonomi dengan keragaman potensi hortikultura serta fasilitas publik yang lengkap.</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         KONTEN PROFIL & POTENSI
+         ============================================================ -->
+      <section id="profil-dusun" class="py-5">
+         <div class="container my-4">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <img src="img/menu/1.jpg" alt="Dusun Gemblengan" class="img-fluid rounded-4 shadow-lg" style="border: 6px solid #fff;">
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <span class="slbl">Profil Wilayah</span>
+                  <h2 class="stitle text-start mb-4">Pusat Desa <span>Gemblengan</span></h2>
+                  
+                  <div class="mb-4">
+                     <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                        Dusun Gemblengan merupakan pusat administrasi dan kegiatan utama yang letaknya berada persis di <strong>bagian tengah</strong> wilayah Desa Gemblengan. Dusun ini mencakup area pemukiman yang cukup padat dengan pembagian administratif sebanyak <strong>9 RT dan 1 RW</strong>.
+                     </p>
+                     <p style="font-size: 1.05rem; color: #555; line-height: 1.8;">
+                        Sebagian besar warga di Dusun Gemblengan menggantungkan mata pencahariannya sebagai <strong>petani, buruh, dan wirausaha</strong>. Dinamika ekonomi di dusun ini tergolong yang paling pesat karena posisinya yang strategis sebagai jantung desa.
+                     </p>
+                  </div>
+
+                  <div class="p-4 rounded-3 mt-4" style="background-color: rgba(220, 53, 69, 0.05); border-left: 4px solid #d32f2f;">
+                     <h5 class="mb-3" style="color: #d32f2f;"><i class="fas fa-seedling me-2"></i> Potensi Unggulan</h5>
+                     <p class="mb-0" style="color: #444;">
+                        Dusun Gemblengan memiliki potensi besar dalam sektor <strong>Pertanian Hortikultura</strong>. Lahan-lahan pertanian yang ada dikelola secara intensif dengan komoditas unggulan utama berupa budidaya <strong>tanaman cabai dan tomat</strong> yang mendistribusikan hasil panennya ke berbagai pasar di Kabupaten Wonosobo.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         FASILITAS UMUM DUSUN
+         ============================================================ -->
+      <section id="fasilitas-umum" class="py-5" style="background-color: #f8f9fa;">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Infrastruktur</span>
+               <h2 class="stitle">Daftar <span>Fasilitas Umum</span></h2>
+               <div class="sline mx-auto"></div>
+               <p class="sdesc mx-auto mt-3" style="max-width: 650px;">
+                  Sebagai pusat desa, Dusun Gemblengan dilengkapi dengan berbagai fasilitas pendidikan, tempat ibadah, olahraga, kesehatan, hingga pemerintahan yang memadai.
+               </p>
+            </div>
+
+            <div class="row g-4">
+               <!-- Tempat Ibadah -->
+               <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                  <div class="fasum-card">
+                     <div class="fasum-icon"><i class="fas fa-mosque"></i></div>
+                     <h5 class="mb-3 fw-bold">Tempat Ibadah</h5>
+                     <ul class="fasum-list">
+                        <li><i class="fas fa-circle"></i> Masjid Al Furqon</li>
+                        <li><i class="fas fa-circle"></i> Masjid Baiturrohman</li>
+                        <li><i class="fas fa-circle"></i> Mushola Al Hidayah</li>
+                        <li><i class="fas fa-circle"></i> Mushola (Tengah)</li>
+                        <li><i class="fas fa-circle"></i> Mushola (Pinggir jalan)</li>
+                        <li><i class="fas fa-circle"></i> Mushola Birrul Walidain</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <!-- Pendidikan -->
+               <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                  <div class="fasum-card">
+                     <div class="fasum-icon"><i class="fas fa-graduation-cap"></i></div>
+                     <h5 class="mb-3 fw-bold">Fasilitas Pendidikan</h5>
+                     <ul class="fasum-list">
+                        <li><i class="fas fa-circle"></i> SD N 1 Gemblengan</li>
+                        <li><i class="fas fa-circle"></i> Paud An-Najah</li>
+                        <li><i class="fas fa-circle"></i> TPQ Bidayatul Mubtadiin</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <!-- Olahraga & Rekreasi -->
+               <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                  <div class="fasum-card">
+                     <div class="fasum-icon"><i class="fas fa-futbol"></i></div>
+                     <h5 class="mb-3 fw-bold">Olahraga & Rekreasi</h5>
+                     <ul class="fasum-list">
+                        <li><i class="fas fa-circle"></i> Lapangan Gemblengan</li>
+                        <li><i class="fas fa-circle"></i> GOR Gemblengan</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <!-- Pemerintahan & Kesehatan -->
+               <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                  <div class="fasum-card">
+                     <div class="fasum-icon"><i class="fas fa-building"></i></div>
+                     <h5 class="mb-3 fw-bold">Pemerintahan & Kesehatan</h5>
+                     <ul class="fasum-list">
+                        <li><i class="fas fa-circle"></i> Balai Desa Gemblengan</li>
+                        <li><i class="fas fa-circle"></i> Puskesmas Bantu Gemblengan</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tombol Navigasi Antar Dusun -->
+            <div class="text-center mt-5 pt-4" data-aos="fade-up">
+               <h6 class="text-muted mb-3">Jelajahi Wilayah Dusun Lainnya:</h6>
+               <div class="d-flex justify-content-center flex-wrap gap-2">
+                  <a href="potensi-bedilon.html" class="btn btn-outline-danger px-4 rounded-pill">Bedilon</a>
+                  <a href="potensi-gesing.html" class="btn btn-outline-danger px-4 rounded-pill">Gesing</a>
+                  <a href="potensi-gajihan.html" class="btn btn-outline-danger px-4 rounded-pill">Gajihan</a>
+                  <a href="potensi-kasiman.html" class="btn btn-outline-danger px-4 rounded-pill">Kasiman</a>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Akses Cepat</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#hero"><i class="fas fa-chevron-right"></i>Beranda</a></li>
+                     <li><a href="index.html#about"><i class="fas fa-chevron-right"></i>Profil Desa</a></li>
+                     <li><a href="index.html#menu"><i class="fas fa-chevron-right"></i>Potensi Desa</a></li>
+                     <li><a href="peta_interaktif.html"><i class="fas fa-chevron-right"></i>Peta Spasial</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Layanan Warga</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#transparansi"><i class="fas fa-chevron-right"></i>Transparansi</a></li>
+                     <li><a href="index.html#contact-section"><i class="fas fa-chevron-right"></i>Lapor/Aduan</a></li>
+                     <li><a href="rincian_struktur_organisasi.html"><i class="fas fa-chevron-right"></i>Data Aparatur</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa Gemblengan, Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Telepon</strong>+62 812-3456-7890</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa Gemblengan</span>. All Rights Reserved.</p>
+                  <div><a href="#">Kebijakan Privasi</a><a href="#">Transparansi Anggaran</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+      <!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- Magnific Popup -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>

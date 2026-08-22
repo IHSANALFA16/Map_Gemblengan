@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Transparansi Anggaran Pendapatan dan Belanja Desa (APBDesa) Gemblengan Tahun 2026">
+      <title>Transparansi APBDes 2026 - Desa Gemblengan</title>
+      
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+      
+      <!-- CSS Assets -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <link href="css/aos.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <link rel="stylesheet" href="css/style.css" />
+
+      <style>
+         .inner-page-header {
+             padding: 160px 0 80px;
+             background: linear-gradient(rgba(13, 15, 19, 0.85), rgba(13, 15, 19, 0.95)), url('img/banner-img.jpg') center/cover fixed;
+             text-align: center;
+         }
+         
+         /* Styling Khusus Tabel APBDes */
+         .apbdes-card {
+             background: #fff;
+             border-radius: 15px;
+             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+             border: 1px solid #f0f0f0;
+             margin-bottom: 30px;
+             overflow: hidden;
+         }
+         .apbdes-header {
+             background-color: #d32f2f;
+             color: #fff;
+             padding: 20px;
+             font-weight: 600;
+             font-size: 1.2rem;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+         }
+         .apbdes-header.green { background-color: #198754; }
+         .apbdes-header.blue { background-color: #0d6efd; }
+         
+         .table-apbdes th {
+             background-color: #f8f9fa;
+             color: #555;
+             font-weight: 600;
+         }
+         .table-apbdes td, .table-apbdes th {
+             padding: 15px;
+             vertical-align: middle;
+         }
+         .val-col {
+             text-align: right;
+             font-weight: 600;
+             color: #2b2b2b;
+             white-space: nowrap;
+         }
+         
+         /* Styling Accordion untuk Rincian Belanja */
+         .accordion-button:not(.collapsed) {
+             color: #d32f2f;
+             background-color: rgba(211, 47, 47, 0.05);
+             box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+         }
+         .accordion-button:focus {
+             box-shadow: none;
+             border-color: rgba(0,0,0,.125);
+         }
+         .badge-total {
+             font-size: 0.95rem;
+             padding: 8px 15px;
+             border-radius: 8px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR & NAVBAR (Tetap Sama Seperti Halaman Lain)
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+                  <li class="nav-item dropdown">
+                       <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                       </a>
+                       <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                          <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                          <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                       </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="peta_interaktif.html">Peta Desa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="rincian_struktur_organisasi.html">Aparatur</a></li>
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Kontak</a></li>
+               </ul>
+               <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kabupaten Wonosobo" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+               </div>
+            </div>
+         </div>
+      </nav>
+
+      <!-- ============================================================
+         HEADER HALAMAN
+         ============================================================ -->
+      <section class="inner-page-header">
+         <div class="container">
+             <span class="slbl" style="color: #198754; font-weight: 600; background: rgba(255,255,255,0.9); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px;"> Informasi Publik</span>
+             <h1 class="htitle text-white mb-3">Infografis APBDesa <span>Tahun 2026</span></h1>
+             <p class="hdesc text-white mx-auto" style="max-width: 700px;">Rincian Anggaran Pendapatan dan Belanja Desa (APBDes) Gemblengan, Kecamatan Garung, Kabupaten Wonosobo sebagai wujud tata kelola pemerintahan yang transparan dan akuntabel.</p>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         KONTEN APBDES: PENDAPATAN & PEMBIAYAAN
+         ============================================================ -->
+      <section class="py-5 bg-light">
+         <div class="container mt-4">
+            <div class="row g-4">
+               <!-- Kolom Pendapatan -->
+               <div class="col-lg-8" data-aos="fade-right">
+                  <div class="apbdes-card">
+                     <div class="apbdes-header green">
+                        <span><i class="fas fa-hand-holding-usd me-2"></i> Rincian Pendapatan Desa</span>
+                        <span>Tahun 2026</span>
+                     </div>
+                     <div class="table-responsive">
+                        <table class="table table-hover table-apbdes mb-0">
+                           <tbody>
+                              <tr>
+                                 <td>Dana Desa</td>
+                                 <td class="val-col">Rp. 373.456.000</td>
+                              </tr>
+                              <tr>
+                                 <td>BHPRD Kabupaten</td>
+                                 <td class="val-col">Rp. 74.133.250</td>
+                              </tr>
+                              <tr>
+                                 <td>Alokasi Dana Desa</td>
+                                 <td class="val-col">Rp. 525.648.000</td>
+                              </tr>
+                              <tr>
+                                 <td>Bunga Bank</td>
+                                 <td class="val-col">Rp. 2.000.000</td>
+                              </tr>
+                              <tr class="table-success">
+                                 <td class="fw-bold fs-5 text-success">Total Pendapatan</td>
+                                 <td class="val-col fw-bold fs-5 text-success">Rp. 1.059.681.788</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Kolom Pembiayaan -->
+               <div class="col-lg-4" data-aos="fade-left">
+                  <div class="apbdes-card h-100">
+                     <div class="apbdes-header blue">
+                        <span><i class="fas fa-piggy-bank me-2"></i> Pembiayaan</span>
+                     </div>
+                     <div class="p-4 d-flex flex-column justify-content-center h-100 text-center">
+                        <p class="text-muted mb-2">Penerimaan Pembiayaan</p>
+                        <h2 class="text-primary fw-bold mb-0">Rp. 84.444.538</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         KONTEN APBDES: RINCIAN BELANJA DESA (ACCORDION)
+         ============================================================ -->
+      <section class="py-5">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Alokasi Anggaran</span>
+               <h2 class="stitle">Rincian Pelaksanaan <span>Belanja Desa</span></h2>
+               <div class="sline mx-auto"></div>
+               <p class="text-muted mt-3">Klik pada masing-masing bidang di bawah ini untuk melihat rincian detail program dan anggarannya.</p>
+            </div>
+
+            <div class="accordion shadow-sm" id="accordionAPBDes" data-aos="fade-up">
+               
+               <!-- 1. BIDANG PENYELENGGARAAN PEMERINTAHAN DESA -->
+               <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+                  <h2 class="accordion-header" id="headingSatu">
+                     <button class="accordion-button fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatu" aria-expanded="true" aria-controls="collapseSatu">
+                        <div class="d-flex justify-content-between align-items-center w-100 pe-3 flex-wrap gap-2">
+                           <span><i class="fas fa-building text-danger me-2"></i> BIDANG PENYELENGGARAAN PEMERINTAHAN DESA</span>
+                           <span class="badge bg-danger badge-total">Rp. 648.294.123</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="collapseSatu" class="accordion-collapse collapse show" aria-labelledby="headingSatu" data-bs-parent="#accordionAPBDes">
+                     <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                           <table class="table table-striped table-hover mb-0">
+                              <tbody>
+                                 <tr><td>Penyediaan Tunjangan Kepala Desa</td><td class="val-col">Rp. 6.000.000</td></tr>
+                                 <tr><td>Penyediaan Penghasilan Tetap dan Tunjangan Perangkat Desa</td><td class="val-col">Rp. 377.700.000</td></tr>
+                                 <tr><td>Penyediaan Jaminan Sosial bagi Kepala Desa dan Perangkat Desa</td><td class="val-col">Rp. 23.568.480</td></tr>
+                                 <tr><td>Penyediaan Operasional Pemerintah Desa (ATK, Honor PKPKD & PPKD, Pakaian dll)</td><td class="val-col">Rp. 52.409.520</td></tr>
+                                 <tr><td>Penyediaan Tunjangan BPD</td><td class="val-col">Rp. 28.200.000</td></tr>
+                                 <tr><td>Penyediaan Insentif/Operasional RT/RW</td><td class="val-col">Rp. 37.800.000</td></tr>
+                                 <tr><td>Penyediaan Operasional Pemerintah Desa yang bersumber dari Dana Desa</td><td class="val-col">Rp. 11.200.000</td></tr>
+                                 <tr><td>Penyediaan Jaminan Sosial BPD</td><td class="val-col">Rp. 1.220.400</td></tr>
+                                 <tr><td>Penyedia Sarana (Aset Tetap) Perkantoran/Pemerintahan</td><td class="val-col">Rp. 2.152.573</td></tr>
+                                 <tr><td>Pemetaan dan Analisis Kemiskinan Desa secara Partisipatif</td><td class="val-col">Rp. 7.400.000</td></tr>
+                                 <tr><td>Penyusunan Dokumen Perencanaan Desa (RPJMDesa/RKPDesa dll)</td><td class="val-col">Rp. 7.500.000</td></tr>
+                                 <tr><td>Penyusunan Dokumen Keuangan Desa (APBDes, APBDes Perubahan, LPJ dll)</td><td class="val-col">Rp. 7.500.000</td></tr>
+                                 <tr><td>Penyusunan Laporan Kepala Desa, LPP Desa dan Informasi Kepada Masyarakat</td><td class="val-col">Rp. 10.429.900</td></tr>
+                                 <tr><td>Dukungan dan Sosialisasi Pelaksanaan Pilkades, Pemilihan Ka. Kewilayahan & BPD</td><td class="val-col">Rp. 67.213.250</td></tr>
+                                 <tr><td>Administrasi Pajak Bumi dan Bangunan (PBB)</td><td class="val-col">Rp. 8.000.000</td></tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 2. BIDANG PELAKSANAAN PEMBANGUNAN DESA -->
+               <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+                  <h2 class="accordion-header" id="headingDua">
+                     <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDua" aria-expanded="false" aria-controls="collapseDua">
+                        <div class="d-flex justify-content-between align-items-center w-100 pe-3 flex-wrap gap-2">
+                           <span><i class="fas fa-tools text-warning me-2"></i> BIDANG PELAKSANAAN PEMBANGUNAN DESA</span>
+                           <span class="badge bg-warning text-dark badge-total">Rp. 327.214.200</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="collapseDua" class="accordion-collapse collapse" aria-labelledby="headingDua" data-bs-parent="#accordionAPBDes">
+                     <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                           <table class="table table-striped table-hover mb-0">
+                              <tbody>
+                                 <tr><td>Penyelenggaraan PAUD/TK/TPA/TKA/TPQ/Madrasah NonFormal Milik Desa</td><td class="val-col">Rp. 39.200.000</td></tr>
+                                 <tr><td>Pembangunan/Rehabilitasi/Peningkatan/Pengadaan Sarana/Prasarana/Alat Peraga</td><td class="val-col">Rp. 44.358.100</td></tr>
+                                 <tr><td>Dukungan Pendidikan bagi Siswa Miskin/Berprestasi</td><td class="val-col">Rp. 6.000.000</td></tr>
+                                 <tr><td>Penyelenggaraan Pos Kesehatan Desa/Polindes Milik Desa (obat, insentif, KB, dsb)</td><td class="val-col">Rp. 1.000.000</td></tr>
+                                 <tr><td>Penyelenggaraan Posyandu (Mkn Tambahan, Kls Bumil, Lansia, Insentif)</td><td class="val-col">Rp. 88.050.000</td></tr>
+                                 <tr><td>Penyuluhan dan Pelatihan Bidang Kesehatan (Untuk Masy, Tenaga dan Kader dll)</td><td class="val-col">Rp. 11.325.000</td></tr>
+                                 <tr><td>Pengasuhan Bersama atau Bina Keluarga Balita (BKB)</td><td class="val-col">Rp. 3.095.000</td></tr>
+                                 <tr><td>Pembangunan/Rehabilitasi/Peningkatan/Pengadaan Sarana Posyandu/Polindes/PKD</td><td class="val-col">Rp. 500.000</td></tr>
+                                 <tr><td>Penyelenggaraan POSBINDU</td><td class="val-col">Rp. 8.930.000</td></tr>
+                                 <tr><td>Pemeliharaan Jalan Desa</td><td class="val-col">Rp. 4.000.000</td></tr>
+                                 <tr><td>Pemeliharaan Jalan Lingkungan Permukiman/ Gang</td><td class="val-col">Rp. 1.280.700</td></tr>
+                                 <tr><td>Pembangunan/Rehabilitasi/Peningkatan/Pengerasan Jalan Lingkungan Permukiman</td><td class="val-col">Rp. 31.905.050</td></tr>
+                                 <tr><td>Pembangunan/Rehabilitasi/Peningkatan/Pengerasan Jalan Desa (Gorong, Selokan dll)</td><td class="val-col">Rp. 40.000.000</td></tr>
+                                 <tr><td>Pemeliharaan Fasilitas Pengelolaan Sampah Desa</td><td class="val-col">Rp. 42.720.000</td></tr>
+                                 <tr><td>Penyelenggaraan Informasi Publik Desa (Poster, Baliho Dll)</td><td class="val-col">Rp. 2.100.000</td></tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 3. BIDANG PEMBINAAN KEMASYARAKATAN -->
+               <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+                  <h2 class="accordion-header" id="headingTiga">
+                     <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTiga" aria-expanded="false" aria-controls="collapseTiga">
+                        <div class="d-flex justify-content-between align-items-center w-100 pe-3 flex-wrap gap-2">
+                           <span><i class="fas fa-users text-info me-2"></i> BIDANG PEMBINAAN KEMASYARAKATAN</span>
+                           <span class="badge bg-info badge-total">Rp. 42.873.465</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="collapseTiga" class="accordion-collapse collapse" aria-labelledby="headingTiga" data-bs-parent="#accordionAPBDes">
+                     <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                           <table class="table table-striped table-hover mb-0">
+                              <tbody>
+                                 <tr><td>Penyelenggaraan Festival Kesenian, Adat/Kebudayaan dan Keagamaan (HUT RI, dll)</td><td class="val-col">Rp. 10.000.000</td></tr>
+                                 <tr><td>Pengiriman Kontingen Kepemudaan & Olahraga Sebagai Wakil Desa Tkt Kec/Kab</td><td class="val-col">Rp. 2.023.465</td></tr>
+                                 <tr><td>Pembinaan PKK</td><td class="val-col">Rp. 30.850.000</td></tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 4. BIDANG PEMBERDAYAAN MASYARAKAT -->
+               <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+                  <h2 class="accordion-header" id="headingEmpat">
+                     <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEmpat" aria-expanded="false" aria-controls="collapseEmpat">
+                        <div class="d-flex justify-content-between align-items-center w-100 pe-3 flex-wrap gap-2">
+                           <span><i class="fas fa-seedling text-success me-2"></i> BIDANG PEMBERDAYAAN MASYARAKAT</span>
+                           <span class="badge bg-success badge-total">Rp. 8.900.000</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="collapseEmpat" class="accordion-collapse collapse" aria-labelledby="headingEmpat" data-bs-parent="#accordionAPBDes">
+                     <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                           <table class="table table-striped table-hover mb-0">
+                              <tbody>
+                                 <tr><td>Peningkatan Produksi Tanaman Pangan (alat produksi/ pengelolaan/ penggilingan)</td><td class="val-col">Rp. 8.900.000</td></tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 5. BIDANG PENANGGULANGAN BENCANA, DARURAT DAN KEADAAN MENDESAK -->
+               <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+                  <h2 class="accordion-header" id="headingLima">
+                     <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLima" aria-expanded="false" aria-controls="collapseLima">
+                        <div class="d-flex justify-content-between align-items-center w-100 pe-3 flex-wrap gap-2">
+                           <span><i class="fas fa-exclamation-triangle text-secondary me-2"></i> BIDANG PENANGGULANGAN BENCANA & DARURAT</span>
+                           <span class="badge bg-secondary badge-total">Rp. 32.400.000</span>
+                        </div>
+                     </button>
+                  </h2>
+                  <div id="collapseLima" class="accordion-collapse collapse" aria-labelledby="headingLima" data-bs-parent="#accordionAPBDes">
+                     <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                           <table class="table table-striped table-hover mb-0">
+                              <tbody>
+                                 <tr><td>Penanganan Keadaan Mendesak</td><td class="val-col">Rp. 32.400.000</td></tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Akses Cepat</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#hero"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                     <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> Profil Desa</a></li>
+                     <li><a href="index.html#menu"><i class="fas fa-chevron-right"></i> Info Dusun</a></li>
+                     <li><a href="peta_interaktif.html"><i class="fas fa-chevron-right"></i> Peta Spasial</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Layanan Warga</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="apbdes.html"><i class="fas fa-chevron-right"></i> Transparansi</a></li>
+                     <li><a href="index.html#contact-section"><i class="fas fa-chevron-right"></i> Lapor/Aduan</a></li>
+                     <li><a href="rincian_struktur_organisasi.html"><i class="fas fa-chevron-right"></i> Data Aparatur</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa Gemblengan, Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Telepon</strong>+62 812-3456-7890</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa Gemblengan</span>. All Rights Reserved.</p>
+                  <div><a href="apbdes.html">Transparansi Anggaran</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+      <!-- Script Template & Bootstrap -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>

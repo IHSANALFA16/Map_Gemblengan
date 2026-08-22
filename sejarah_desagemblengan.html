@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sejarah Panjang dan Daftar Pemimpin Desa Gemblengan">
+    <title>Sejarah Desa - WebDesa Gemblengan</title>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Bootstrap 5.3 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- AOS Animate on Scroll -->
+    <link href="css/aos.css" rel="stylesheet"/>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <!-- Style CSS Utama -->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <style>
+        .inner-header {
+            position: relative;
+            background-color: #111111; 
+            padding: 120px 0 80px 0;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 60px;
+        }
+        .history-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+        }
+        /* Style khusus untuk kartu kades full-width */
+        /* Style khusus untuk kartu kades full-width */
+        .kades-card-horizontal {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .kades-card-horizontal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+        
+        /* 1. MENGATUR KEDUA KOLOM AGAR SAMA TINGGI */
+        .kades-card-horizontal .row {
+            display: flex;
+            align-items: stretch !important; /* Memaksa kotak krem mengikuti tinggi teks */
+        }
+        
+        /* 2. MENGATUR KOTAK KREM DAN FOTO KE TENGAH */
+        .kades-img-wrap {
+            background-color: #fcf9f4;
+            padding: 30px;
+            /* Pengaturan Flexbox untuk memposisikan foto */
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center !important; /* Menurunkan foto ke tengah secara vertikal */
+            align-items: center !important;     /* Menengahkan foto secara horizontal */
+        }
+        
+        .kades-img-large {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #e74c3c;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .kades-body-large {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+    <div id="topbar">
+        <div class="container">
+           <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <div class="top-contact d-flex flex-wrap">
+                 <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                 <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                 <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    
+    <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+    <nav class="navbar navbar-expand-lg shadow-sm" id="nav" style="background:#fff;">
+        <div class="container">
+           <a class="navbar-brand" href="index.html">
+              <div class="blogo">
+                 <div class="bico"><i class="fas fa-landmark"></i></div>
+                 <div>
+                    <div class="bname">Web<span>Desa Gemblengan</span></div>
+                    <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                 </div>
+              </div>
+           </a>
+           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+           </button>
+           <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav mx-auto">
+                 <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+                 <!-- Dropdown Profil Desa -->
+                    <li class="nav-item dropdown">
+                       <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                       </a>
+                       <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                          <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                          <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                       </ul>
+                    </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow">
+                       <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                    </ul>
+                 </li>
+                 <li class="nav-item"><a class="nav-link" href="Peta_Interaktif.html">Peta Desa</a></li>
+                 <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index.html#chefs">Aparatur</a></li>
+                 <li class="nav-item"><a class="nav-link" href="apbdes.html">Transparansi</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Kontak</a></li>
+              </ul>
+              <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <!-- PENTING: Ganti tulisan 'nama-logo-anda.png' dengan nama file logo Anda yang sebenarnya -->
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kanan" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+           </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         INNER HEADER
+         ============================================================ -->
+    <section class="inner-header">
+       <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+          <span class="mb-3 px-4 py-2 shadow-sm" style="background-color: #e74c3c; color: #fff; font-weight: 600; border-radius: 50px; font-size: 0.85rem; letter-spacing: 0.5px; display: inline-block;">
+             <i class="fas fa-book-open me-1"></i> Profil Desa
+          </span>
+          <h1 class="htitle text-white mb-3">Sejarah <span style="color: var(--primary);">Desa Gemblengan</span></h1>
+          <p class="hdesc text-light mx-auto" style="max-width: 600px;">Menelusuri jejak historis, peradaban, dan daftar kepemimpinan Desa Gemblengan dari masa perlawanan Pangeran Diponegoro hingga era modern.</p>
+       </div>
+    </section>
+
+    <!-- ============================================================
+         KONTEN SEJARAH DESA (TEKS UTUH)
+         ============================================================ -->
+    
+    <section id="sejarah" class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <h3 class="mb-4" style="font-family: 'Playfair Display', serif; font-weight: 700; color: #333;">Asal Usul Pembentukan Desa</h3>
+                    <p class="history-text">Desa ini merupakan sebuah desa yang memiliki historis yang kental dengan sejarah panjang hingga akhirnya desa tersebut diberi nama Gemblengan. Sejarah penamaan Desa Gemblengan sekitar tahun 1820-an berawal dari saat terjadinya perlawanan Pangeran Diponegoro melawan para penjajah Belanda. Kala itu sebuah wilayah yang berpenduduk dengan mata pencaharian bertani belum menyandang nama, hingga datanglah seseorang yang diyakini sebagai prajurit Pangeran Diponegoro. Beliau membawa perubahan besar pada penduduk asli wilayah yang berada di lereng Gunung Sindoro sebelah barat, yaitu jiwa patriotisme pada tanah kelahiran, sistem ekonomi, kebudayaan/kesenian, dan peradaban Islam.</p>
+
+                    <div class="accordion mt-5" id="accordionSejarah">
+                        <div class="accordion-item border-0 mb-3 shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingSatu">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSatu" aria-expanded="true" aria-controls="collapseSatu" style="background-color: #f8f9fa; font-weight: 600; color: #333;">
+                                    <i class="fas fa-horse me-2 text-danger"></i> A. Pelatihan Fisik Berperang
+                                </button>
+                            </h2>
+                            <div id="collapseSatu" class="accordion-collapse collapse show" aria-labelledby="headingSatu" data-bs-parent="#accordionSejarah">
+                                <div class="accordion-body history-text">
+                                    <p>Terungkapnya pelatihan keprajuritan diawali dari cerita turun-temurun penduduk setempat, bahwa jiwa berperang wilayah ini sangat luar biasa di masa lampau saat belum ramai kuda Jepang (kendaraan bermotor); penduduk ini sangat dekat dengan kuda tunggangan. Terbukti dengan banyaknya penduduk yang memelihara kuda. Sampai sekitar tahun 1988 masih banyak penduduk yang menggunakan kuda sebagai alat transportasi. Saking akrabnya penduduk dengan kuda, di tempat ini juga terdapat kuburan hewan perang (sebelah timur lapangan sepak bola). Cerita dari nenek moyang terungkap saat warga menemukan tulang belulang berupa kerangka kepala dan tulang kuda dalam jumlah banyak di tempat ini pada masa lalu.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingDua">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDua" aria-expanded="false" aria-controls="collapseDua" style="background-color: #f8f9fa; font-weight: 600; color: #333;">
+                                    <i class="fas fa-coins me-2 text-danger"></i> B. Sistem Ekonomi
+                                </button>
+                            </h2>
+                            <div id="collapseDua" class="accordion-collapse collapse" aria-labelledby="headingDua" data-bs-parent="#accordionSejarah">
+                                <div class="accordion-body history-text">
+                                    <p>Sejak zaman dahulu penduduk wilayah ini terkenal dengan jiwa kewirausahaan dan perniagaan. Salah satunya yang sampai saat ini masih berjalan adalah sebagian penduduk yang membuat kerajinan rigen (tempat menjemur irisan tembakau) yang terbuat dari bahan baku bambu yang tidak terdapat di wilayah Kabupaten Wonosobo lainnya. Rigen dijual sampai ke wilayah Temanggung dan sekitarnya. Selain rigen, juga ada beberapa jenis kerajinan alat rumah tangga, hiasan ruangan, tempat sampah, dan lain-lain yang bahan bakunya dari bambu. Penduduk sejak dahulu berlangganan menjual hasil bumi seperti tanaman hortikultura dan tembakau garangan, dan hal ini masih berlangsung sampai saat ini. Untuk lahan pertanian sendiri terdapat tanah tegalan dan sawah.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingTiga">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTiga" aria-expanded="false" aria-controls="collapseTiga" style="background-color: #f8f9fa; font-weight: 600; color: #333;">
+                                    <i class="fas fa-mask me-2 text-danger"></i> C. Budaya Seni
+                                </button>
+                            </h2>
+                            <div id="collapseTiga" class="accordion-collapse collapse" aria-labelledby="headingTiga" data-bs-parent="#accordionSejarah">
+                                <div class="accordion-body history-text">
+                                    <p>Pada masa kejayaannya, wilayah ini pernah menjadi pusat budaya dan seni. Kala itu terdapat beberapa kelompok kesenian (wayang kulit, ketoprak, debus, rudat/sejenis pencak silat, karawitan), dan terdapat pula beberapa dalang sampai tahun 1980-an. Kesenian yang masih ada sampai sekarang antara lain tari kuda kepang, lengger, pencak silat, dan rebana.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingEmpat">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEmpat" aria-expanded="false" aria-controls="collapseEmpat" style="background-color: #f8f9fa; font-weight: 600; color: #333;">
+                                    <i class="fas fa-mosque me-2 text-danger"></i> D. Peradaban
+                                </button>
+                            </h2>
+                            <div id="collapseEmpat" class="accordion-collapse collapse" aria-labelledby="headingEmpat" data-bs-parent="#accordionSejarah">
+                                <div class="accordion-body history-text">
+                                    <p>Wilayah yang berpenduduk mayoritas beragama Islam ini tidak lepas dari sejarah panjang berdirinya tempat-tempat ibadah, sistem pendidikan, dan tokoh-tokoh Islam kala itu. Di sebelah utara lapangan sepak bola terdapat cerita turun-temurun bahwa wilayah tersebut suatu saat akan muncul masjid. Wilayah yang dikenal angker ini membuat warga jarang berani menginjak wilayah yang ditumbuhi pohon bambu dan semak belukar tersebut. Wilayah ini dipercaya dulu menjadi padepokan dan kediaman tokoh sentral asal mula desa ini, dengan segala cerita mistisnya. Majunya Islam di wilayah ini juga dibuktikan dengan adanya penduduk asli yang menunaikan ibadah haji pada tahun 1980-an dan tidak pernah kembali. Pada tahun 1910-an ada pula penduduk yang menunaikan ibadah haji dan kembali pulang ke wilayah ini, dan nasab keturunannya masih jelas serta ada sampai saat ini.</p>
+                                    <p>Dari beberapa cerita di atas bisa disimpulkan bahwa wilayah ini pernah menjadi pusat peradaban. Terdapat pula makam etnis Tionghoa di sebelah barat makam Balekambang, yang meyakinkan bahwa pada masa itu pernah ada pemukiman etnis Tionghoa di wilayah ini. Etnis ini terkenal dengan sistem perdagangan sampai saat ini, sehingga menguatkan bahwa tempat ini pernah juga menjadi pusat perdagangan. Makam Balekambang yang berada di wilayah ini dulu kala menjadi pusat pemakaman Islam daerah ini, terbukti sampai saat ini masih digunakan oleh 9 dusun dari dua kecamatan sekitar.</p>
+                                    <p>Makam Kyai Gembleng sampai saat ini masih menjadi tempat ziarah bagi masyarakat sekitar Desa Gemblengan. Nama Kyai Gembleng sampai saat ini juga selalu disebutkan dalam setiap acara yang ada di Desa Gemblengan, baik tahlil maupun ritual keagamaan lainnya.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         DAFTAR KEPALA DESA (FULL WIDTH LAYOUT)
+         ============================================================ -->
+    <section id="kepala-desa" style="background-color: #fcf9f4; padding: 80px 0;">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="slbl">Pemerintahan Desa</span>
+                <h2 class="stitle">Kepala Desa / <span>Pemimpin di Desa Gemblengan</span></h2>
+                <div class="sline"></div>
+                <p class="sdesc mx-auto" style="max-width: 600px;">Catatan keberhasilan Kepala Desa Gemblengan dari masa ke masa berdasarkan data profil dan sejarah desa.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <!-- 1. KH. Abdurrahman -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke1.png" alt="KH. Abdurrahman" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">1. KH. Abdurrahman</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: - 1943</h6>
+                                    <p class="history-text mb-0">Beliau kelahiran Desa Slukatan, Kecamatan Mojotengah, pindah ke Desa Gemblengan dan menikah dengan perempuan anak sulung H. Mentadrana. Sekaligus meneruskan menjadi imam mushola pada saat itu. Kepemimpinan KH. Abdurrahman harus terhenti saat instruksi dari Ratu Wilhelmina (Ratu Hindia Belanda) dan diteruskan penguasaan Jepang, bahwa kepemimpinan setingkat Demang harus demokratis yaitu dengan pemilihan. Dengan syarat Demang tidak boleh ikut dalam pemilihan Glondong sehingga beliau mengangkat anak pertamanya untuk maju dalam pemilihan Glondong. Nama Glondong adalah jabatan di bawah Kawedanan atau membawahi beberapa kelurahan. Saat beliau menjabat pada tahun 1934, beliau membangun Masjid Baiturrahman di Dusun Gemblengan, yang merupakan masjid pertama di daerah Gemblengan dan sekitarnya.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. KH. Muhammad Sakroni -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke2.png" alt="KH. Muhammad Sakroni" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">2. KH. Muhammad Sakroni bin KH. Abdurrahman</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 1943 - 1986</h6>
+                                    <p class="history-text mb-3">Dalam pemilihan Glondong terdapat dua calon kuat, yaitu antara H. M. Sakroni yang tidak lain adalah anak dari Demang sebelumnya sehingga mendapat dukungan dari Hindia Belanda. Calon kedua adalah H. Abdul Ghofar dengan modal keluarga yang sama agamis, orang tuanya tuan tanah, dan beliau baru pulang menuntut ilmu dari salah satu pondok pesantren di Jombang, Provinsi Jawa Timur.</p>
+                                    <p class="history-text mb-0">Dalam pemilihan yang masih menggunakan media potongan lidi daun kolang-kaling (bithing) yang dimasukkan dalam kotak kayu jati, dalam penghitungan di tingkat kawedanan Garung dimenangkan oleh H.M. Sakroni. Kepemimpinan beliau sangat dictator dan karismatik, bertahan sampai 43 tahun. Kegiatan-kegiatan yang menonjol pada saat itu antara lain selapanan desa rutin, pengajian selapanan, pembangunan Sekolah Dasar dan Madrasah Ibtidaiyah Ma'arif Gesing, serta pembentukan kelompok/pertemuan warga RT.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Hadi Prayitno -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke3.png" alt="Hadi Prayitno" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">3. Hadi Prayitno</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 1986 - 1994</h6>
+                                    <p class="history-text mb-2"><strong>Tempat, tanggal lahir:</strong> Wonosobo, 17-04-1941. <br><strong>Ayah:</strong> Wongso Pawiro. <br><strong>Ibu:</strong> Kalijem. <br><strong>Pendidikan:</strong> SR.</p>
+                                    <p class="history-text mb-0">Dalam kepemimpinan beliau, beberapa capaian keberhasilan antara lain terbentuknya PKK, RW, RT, Kelompok Dasawisma juara lomba Kadarkum "Puteri Emas Hijau" tingkat Kecamatan, pembuatan jalan Kasiman-Lengkong bersama ABRI Masuk Desa (AMD), juara lomba desa, dan rolak jalan padat karya Gajihan-Kasiman.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. H. Djamal Abdul Aziz -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke4.png" alt="H. Djamal Abdul Aziz" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">4. H. Djamal Abdul Aziz</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 1994 - 2002</h6>
+                                    <p class="history-text mb-2"><strong>Tempat tanggal lahir:</strong> Wonosobo. <br><strong>Ayah:</strong> H. Mahrom. <br><strong>Pendidikan:</strong> SMP.</p>
+                                    <p class="history-text mb-0">Pada masa kepemimpinannya terjadi pelebaran Jalan Gemblengan ke Bumirejo, pembuatan rumah dinas guru, dan lain-lain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Hadi Mansur -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke5.png" alt="Hadi Mansur" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">5. Hadi Mansur</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 2002 - 2007</h6>
+                                    <p class="history-text mb-2"><strong>Tempat tanggal lahir:</strong> Wonosobo, 06-08-1959. <br><strong>Ayah:</strong> Samjani. <br><strong>Ibu:</strong> Patimah. <br><strong>Pendidikan:</strong> SMP.</p>
+                                    <ul class="history-text mb-0" style="padding-left: 20px;">
+                                        <li>Rehab Jembatan Kaliprupuk</li>
+                                        <li>Berdirinya PAUD An Najah</li>
+                                        <li>Rolak jalan Gemblengan-Bumirejo</li>
+                                        <li>Juara bela diri / silat Porkab</li>
+                                        <li>Terbangunnya Jembatan Kalimaron</li>
+                                        <li>Juara 1 sepak bola 3 kali berturut-turut</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Sri Pangili -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke6.png" alt="Sri Pangili" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">6. Sri Pangili</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 2007 - 2010</h6>
+                                    <p class="history-text mb-2"><strong>Tempat tanggal lahir:</strong> Wonosobo, 03-02-1969. <br><strong>Ayah:</strong> Ahmad S. <br><strong>Ibu:</strong> Kaminem. <br><strong>Pendidikan:</strong> D III.</p>
+                                    <ul class="history-text mb-0" style="padding-left: 20px;">
+                                        <li>Aspal Dusun Kasiman-Dawuhan</li>
+                                        <li>Pembangunan gedung kantor desa</li>
+                                        <li>Perpipaan air bersih Sigandul</li>
+                                        <li>Betonisasi Blederan-Bumirejo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Topo, S.Kom.I -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke7.png" alt="Topo, S.Kom.I" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">7. Topo, S.Kom.I</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 2011 - 2017</h6>
+                                    <p class="history-text mb-2"><strong>Tempat tanggal lahir:</strong> Wonosobo, 21-02-1983. <br><strong>Ayah:</strong> Ilyas Ponijo Muhlani. <br><strong>Ibu:</strong> Muti'ah. <br><strong>Pendidikan:</strong> S1.</p>
+                                    <p class="history-text mb-0">Pada periode kepemimpinannya terasa peningkatan di bidang pelayanan masyarakat dan pemerintahan, peningkatan kesadaran masyarakat akan pendidikan formal dan non-formal, olahraga, serta pembangunan infrastruktur yang signifikan, di antaranya: pembangunan SPAL di Dusun Bedilon, Gajihan, dan Gemblengan; pavingisasi di semua dusun; rehab bangunan-bangunan Sekolah Dasar; pembangunan gedung TK Terpadu dan RA Masyitoh Gesing; TPQ Dusun Kasiman; talut penahan tanah dan senderan-senderan jalan; terbentuknya kelompok-kelompok pemanfaat air bersih (Pamsimas); reboisasi dengan penanaman bibit cengkeh; pembangunan gedung Balai Desa; pembangunan irigasi persawahan; pembangunan Masjid Al Furqon Gemblengan; Mushola Bedilon; rehab Masjid Kasiman; pembukaan jalan tembus Gajihan-Bumirejo dan Gesing-Kalikuning; rolak jalan lingkar utara Dusun Bedilon; pembuatan jalan tembus RT 7 Gemblengan; bantuan pendidikan bagi siswa kurang mampu; serta jambanisasi bagi warga, dan lain-lain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Sri Isman Hartowo -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke8.png" alt="Sri Isman Hartowo" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">8. Sri Isman Hartowo, S.STP</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 2017 - 2018</h6>
+                                    <p class="history-text mb-2"><strong>Tempat tanggal lahir:</strong> Wonosobo, 13-12-1984. <br><strong>Pendidikan:</strong> STP.</p>
+                                    <p class="history-text mb-3">Beliau adalah Pegawai Negeri Sipil yang bertugas di Kecamatan Garung sebagai Kasi Pemerintahan. Beliau kemudian ditugaskan oleh Bapak Camat Garung untuk memimpin Desa Gemblengan sebagai Penjabat Kepala Desa, menggantikan Kepala Desa periode 2011-2017 yang telah habis masa jabatannya pada tahun 2017 dan belum ada pemilihan Kepala Desa kembali.</p>
+                                    <p class="history-text mb-0">Dalam kurun waktu yang sangat singkat, kurang lebih 22 bulan, beliau membawa perubahan yang sangat signifikan di Desa Gemblengan yang dapat dirasakan oleh seluruh lapisan masyarakat, di antaranya: kembalinya kepercayaan masyarakat terhadap pemerintah desa yang selama ini sangat minim kepercayaan; terwujudnya masyarakat Desa Gemblengan yang guyup, rukun, gayeng, dan tentram; terbangunnya kesadaran masyarakat akan pentingnya kebersamaan; terlaksananya tata kelola pemerintahan desa yang baik dan transparan di segala bidang; serta bersatunya seluruh warga desa, di antaranya dengan mengadakan karnaval kirap budaya yang selama ini belum pernah dilaksanakan di Desa Gemblengan. Di sektor pembangunan infrastruktur, beliau juga mewujudkan impian dan harapan warga Desa Gemblengan, di antaranya: pembuatan lapangan sepak bola; betonisasi jalan gang di setiap dusun; pengadaan tanah aset desa yang digunakan untuk penambahan kelas lokal SDN 1 Gemblengan; pembangunan jalan lingkar utara Dusun Bedilon; betonisasi jalan RT 007 Gemblengan; dan lain-lain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Sutrimo -->
+                    <div class="card kades-card-horizontal mb-4" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-3 kades-img-wrap">
+                                <img src="img/kepaladesa/foto_kades_enchant/kades_ke9.png" alt="Sutrimo" class="kades-img-large">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="kades-body-large">
+                                    <h4 class="fw-bold mb-1">9. Sutrimo</h4>
+                                    <h6 class="text-danger fw-bold mb-3">Masa Jabatan: 2019 - 2025</h6>
+                                    <p class="history-text mb-2"><strong>Tempat tanggal lahir:</strong> Wonosobo, 21-06-1973. <br><strong>Bapak:</strong> Muhson. <br><strong>Ibu:</strong> Ponem. <br><strong>Pendidikan:</strong> SLTP.</p>
+                                    <p class="history-text mb-3">Beliau adalah Kepala Desa yang terpilih pada Pemilihan Kepala Desa tahun 2018.</p>
+                                    <p class="history-text mb-0">Sesuai dengan visi dan misi beliau, pada awal kepemimpinannya beliau mengajak kepada semua lembaga desa untuk saling terbuka, berkoordinasi satu dengan yang lainnya, bermusyawarah, dan bekerja sama dalam mewujudkan Desa Gemblengan yang maju, bersatu, dan sejahtera. Di dalam lingkup pemerintahan desa sendiri, beliau selalu menghimbau agar semua perangkat desa bekerja dengan ikhlas, tanggung jawab, disiplin, dan transparansi, berprinsip pada keyakinan dan kejujuran demi kepentingan masyarakat Desa Gemblengan pada umumnya.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="container">
+           <div class="row g-5">
+              <div class="col-lg-4">
+                 <div class="fnm">Web<span>Desa</span></div>
+                 <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                 <div class="ftit">Layanan Spasial</div>
+                 <ul class="flinks ps-0">
+                    <li><a href="Peta_Interaktif.html"><i class="fas fa-chevron-right"></i> Galeri Peta Interaktif</a></li>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Beranda Website</a></li>
+                 </ul>
+              </div>
+              <div class="col-lg-4">
+                 <div class="ftit">Kontak Kami</div>
+                 <div class="fci">
+                    <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="fciinfo"><strong>Alamat</strong>Balai Desa, Kabupaten Wonosobo</div>
+                 </div>
+                 <div class="fci">
+                    <div class="fciico"><i class="fas fa-envelope"></i></div>
+                    <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="fbot">
+           <div class="container">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                 <p>&copy; 2026 <span>Pemerintah Desa</span>. All Rights Reserved.</p>
+              </div>
+           </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

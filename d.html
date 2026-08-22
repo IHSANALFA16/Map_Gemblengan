@@ -1,0 +1,1064 @@
+   <!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" con nt="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Website Resmi Pemerintah Desa - Profil, Potensi, dan Layanan Informasi">
+      <title>Website Pemerintahan Desa Gemblengan</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="#">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
+                  <!-- Dropdown Profil Desa -->
+                    <li class="nav-item dropdown">
+                       <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href=this.href;">
+                          Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                       </a>
+                       <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                          <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                          <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                       </ul>
+                    </li>
+      
+                  <!-- Dropdown Potensi Dusun (Dari penyesuaian sebelumnya) -->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="window.location.href=this.href;">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownPotensi">
+                        <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+      
+                  <!-- MENU BARU: Peta Desa (Mengarah ke WebGIS) -->
+                  <li class="nav-item"><a class="nav-link" href="peta_interaktif.html">Peta Desa</a></li>
+      
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="rincian_struktur_organisasi.html">Aparatur</a></li>
+      
+                  <!-- Menu yang tadinya Layanan diubah menjadi Transparansi (Dari penyesuaian sebelumnya) -->
+                  <li class="nav-item"><a class="nav-link" href="apbdes.html">Transparansi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contact-section">Kontak</a></li>
+               </ul>
+   
+               <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <!-- PENTING: Ganti tulisan 'nama-logo-anda.png' dengan nama file logo Anda yang sebenarnya -->
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kanan" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+         </div>
+      </nav>
+      <!-- ============================================================
+         SEARCH OVERLAY POPUP
+         ============================================================ -->
+      <div id="searchOv">
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>Pencarian Informasi Desa</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Cari layanan, berita, data..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="sovcats">
+               <div class="sovcat active" data-cat="all">
+                  <i class="fas fa-list mb-1"></i> Semua
+               </div>
+               <div class="sovcat" data-cat="layanan">
+                  <i class="fas fa-file-signature mb-1"></i> Layanan
+               </div>
+               <div class="sovcat" data-cat="potensi">
+                  <i class="fas fa-seedling mb-1"></i> Potensi
+               </div>
+               <div class="sovcat" data-cat="peta">
+                  <i class="fas fa-map-marked-alt mb-1"></i> Peta Desa
+               </div>
+               <div class="sovcat" data-cat="berita">
+                  <i class="fas fa-newspaper mb-1"></i> Berita
+               </div>
+            </div>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Pencarian Populer</p>
+               <span class="ttag">Surat Domisili</span>
+               <span class="ttag">Bantuan Sosial</span>
+               <span class="ttag">Jadwal Posyandu</span>
+               <span class="ttag">Peta Wilayah</span>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         HERO
+         ============================================================ -->
+      <section id="hero">
+         <div class="hs hs1"></div>
+         <div class="hs hs2"></div>
+         <div class="hbgtxt">DESA</div>
+         <div class="container">
+            <div class="row align-items-center g-5" style="min-height:88vh;">
+               <div class="col-lg-6">
+                  <div class="hbadge">
+                     <div class="hbi"><i class="fas fa-star"></i></div>
+                     <span>Desa Mandiri & Inovatif di Kabupaten Wonosobo</span>
+                  </div>
+                  <h1 class="htitle">Membangun <span class="hl">Desa</span><br/>Untuk Nusantara</h1>
+                  <p class="hdesc">Website resmi Pemerintahan Desa. Wujud transparansi informasi, kemudahan layanan administrasi digital, dan promosi potensi wilayah yang unggul.</p>
+                  <div class="d-flex flex-wrap gap-3 mb-2">
+                     <a href="#about" class="btn-red"><i class="fas fa-compass"></i>Jelajahi Desa</a>
+                     <!-- VIDEO DRONE DESA -->
+					 <a href="https://www.youtube.com/watch?v=YOUR_DRONE_VIDEO_ID" class="magnific_popup btn-play popup-youtube">
+						<div class="pico"><i class="fas fa-plane"></i></div>
+						<span>Lihat Video Profil Desa</span>
+					 </a>
+                  </div>
+                  <div class="hstats d-flex gap-3 flex-wrap mt-4">
+                     <div class="hstat"><span class="snum">4290<em>+</em></span><small>Penduduk</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">5</span><small>Dusun Wilayah</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">30</span><small>Rukun Tetangga (RT)</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">285<em>Ha</em></span><small>Luas Wilayah</small></div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div style="position:relative;text-align:center;">
+                     <div class="hcircle">
+                        <!-- Ganti gambar burger dengan gambar pemandangan desa / balai desa -->
+                        <img src="img/banner-img.JPG" alt="Pemandangan Desa"/>
+                     </div>
+                     <div class="fcard fc1">
+                        <div class="fcoi r"><i class="fas fa-bullhorn"></i></div>
+                        <div><span class="fcnum">Pengumuman</span><span class="fcsm">Musrenbangdes Besok</span></div>
+                     </div>
+                     <div class="fcard fc2">
+                        <div class="fcoi y"><i class="fas fa-hands-helping"></i></div>
+                        <div><span class="fcnum">Layanan Warga</span><span class="fcsm">Cepat & Transparan</span></div>
+                     </div>
+                     <div class="fcard fc3">
+                        <div class="fcoi g"><i class="fas fa-map-marked-alt"></i></div>
+                        <div><span class="fcnum">WebGIS</span><span class="fcsm">Pemetaan Digital Terpadu</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- MARQUEE (Pengumuman Berjalan) -->
+      <div class="mqsec">
+         <div class="mqtrack">
+            <div class="mqitem"><i class="fas fa-circle"></i>Pelayanan Balai Desa Buka Senin - Jumat Pukul 08.00 - 15.00 WIB</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Gotong Royong Bersih</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Desa Ramah Anak</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Mari Jaga Keamanan dan Ketertiban Lingkungan</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Pelayanan Balai Desa Buka Senin - Jumat Pukul 08.00 - 15.00 WIB</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Gemblengan, Garung, Wonosobo, Jawa Tengah</div>
+         </div>
+      </div>
+      <!-- ============================================================
+         PROFIL DESA - GEOGRAFI & DEMOGRAFI 
+         ============================================================ -->
+      <section id="about">
+         <div class="container">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-5" data-aos="fade-right">
+                  <div class="astack">
+                     <!-- Kamu bisa mengubah angka ini sesuai luas atau jumlah penduduk -->
+                     <div class="aexp"><span class="anum">285</span><small>Hektar<br/>Luas</small></div>
+                     <div class="amain"><img src="img/dusun/gemblengan.png" alt="Bentang Alam Desa"/></div>
+                     <div class="asm"><img src="img/dusun/balai desa.png" alt="Aktivitas Warga"/></div>
+                  </div>
+               </div>
+               <div class="col-lg-7" data-aos="fade-left">
+                  <span class="slbl">Profil Desa</span>
+                  <h2 class="stitle text-start">Geografi & Demografi<br/><span>Desa Gemblengan</span></h2>
+                  <div class="sline lft"></div>
+                  <p class="sdesc mb-4">Desa Gemblengan memiliki bentang alam pegunungan yang subur dan sejuk. Sebagian besar penduduknya menggantungkan hidup pada sektor agraris dan terus berkembang dalam mengelola potensi sumber daya alam maupun manusianya.</p>
+                  
+                  <h4 class="mb-3">Sekilas Info Wilayah</h4>
+                  <div class="mb-4">
+                     <div class="fti">
+                        <div class="ftico r"><i class="fas fa-map-marked-alt"></i></div>
+                        <div>
+                           <h6>Letak Geografis</h6>
+                           <p>Terletak di kawasan strategis lereng pegunungan dengan topografi yang mendukung sektor pertanian, perkebunan, dan sumber air yang melimpah.</p>
+                        </div>
+                     </div>
+                     <div class="fti">
+                        <div class="ftico y"><i class="fas fa-users"></i></div>
+                        <div>
+                           <h6>Kondisi Demografi</h6>
+                           <p>Dihuni oleh masyarakat guyub rukun dengan pertumbuhan penduduk yang stabil. Mayoritas warga berprofesi sebagai petani, peternak, dan penggiat UMKM.</p>
+                        </div>
+                     </div>
+                     <div class="fti">
+                        <div class="ftico g"><i class="fas fa-cloud-sun"></i></div>
+                        <div>
+                           <h6>Iklim & Tata Guna Lahan</h6>
+                           <p>Memiliki iklim tropis sejuk. Sebagian besar lahan digunakan untuk area persawahan, perkebunan sayur organik, dan pemukiman yang asri.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Tombol Hyperlink ke halaman Geografi & Demografi -->
+                  <a href="geografi_demografi.html" class="btn-red"><i class="fas fa-map"></i>Lihat Data Selengkapnya</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         POTENSI WILAYAH PER DUSUN (Menggantikan Menu)
+         ============================================================ -->
+      <!-- ============================================================
+         POTENSI WILAYAH PER DUSUN (Shortcut 5 Dusun - Full Clickable & Stronger Shadow)
+         ============================================================ -->
+      <section id="menu" style="background-color: #f8f9fa; padding: 80px 0; border-top: 1px solid #eaeaea;">
+         
+         <!-- Style CSS tambahan untuk bayangan & efek klik -->
+         <style>
+            .card-dusun {
+               border: 1px solid #f0f0f0;
+               /* Bayangan dipertajam */
+               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important; 
+               transition: all 0.3s ease;
+               cursor: pointer;
+               display: flex;
+               flex-direction: column;
+               height: 100%;
+               background-color: #fff;
+               text-decoration: none !important; /* Menghilangkan garis bawah link */
+            }
+            .card-dusun:hover {
+               /* Efek terangkat dan bayangan semakin tebal saat di-hover */
+               transform: translateY(-8px);
+               box-shadow: 0 18px 40px rgba(220, 53, 69, 0.15) !important;
+               border-color: rgba(220, 53, 69, 0.2);
+            }
+            .card-dusun .mbody {
+               color: #555; /* Warna teks default */
+            }
+            .card-dusun .mtit {
+               color: #2b2b2b;
+               transition: color 0.3s ease;
+            }
+            .card-dusun:hover .mtit {
+               color: #d32f2f; /* Judul berubah warna saat kartu di-hover */
+            }
+         </style>
+
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Lebih Dekat dengan Wilayah Kami</span>
+               <h2 class="stitle">Mengenal <span>5 Dusun</span> Gemblengan</h2>
+               <div class="sline mx-auto"></div>
+               <p class="sdesc mx-auto mt-3" style="max-width: 650px;">
+                  Desa Gemblengan terdiri dari 5 wilayah dusun yang masing-masing memiliki karakteristik bentang alam, kearifan lokal, dan potensi unggulan yang unik. Klik kartu dusun di bawah ini untuk melihat detail selengkapnya.
+               </p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+               
+               <!-- Dusun 1: Gemblengan -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                  <a href="dusun/gemblengan.html" class="mcard card-dusun">
+                     <div class="mimg">
+                        <img src="img/dusun/gemblengan/gemblengan.png" alt="Dusun Gemblengan"/>
+                        <div class="mbdg hot"><i class="fas fa-map-marker-alt"></i> Pusat Desa</div>
+                     </div>
+                     <div class="mbody d-flex flex-column flex-grow-1">
+                        <div class="mcat">Pusat Pemerintahan</div>
+                        <div class="mtit">Dusun Gemblengan</div>
+                        <div class="mdesc mb-4">Pusat kegiatan pemerintahan, fasilitas kesehatan, dan ekonomi desa dengan ragam potensi sosial kemasyarakatan yang berkembang pesat.</div>
+                        <div class="mt-auto">
+                           <div class="btn-red w-100 d-flex justify-content-center align-items-center gap-2" style="padding: 10px; border-radius: 8px; font-size: 0.95rem;">
+                              <span>Jelajahi Dusun</span> <i class="fas fa-arrow-right"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               
+               <!-- Dusun 2: Bedilon -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                  <a href="dusun/bedilon.html" class="mcard card-dusun">
+                     <div class="mimg">
+                        <img src="img/dusun/bedilon/view_bedilon.JPG" alt="Dusun Bedilon"/>
+                     </div>
+                     <div class="mbody d-flex flex-column flex-grow-1">
+                        <div class="mcat">Kawasan Asri</div>
+                        <div class="mtit">Dusun Bedilon</div>
+                        <div class="mdesc mb-4">Wilayah dengan lingkungan yang asri, ditopang oleh produktivitas pertanian organik dan tingginya semangat gotong royong antarwarga.</div>
+                        <div class="mt-auto">
+                           <div class="btn-red w-100 d-flex justify-content-center align-items-center gap-2" style="padding: 10px; border-radius: 8px; font-size: 0.95rem;">
+                              <span>Jelajahi Dusun</span> <i class="fas fa-arrow-right"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- Dusun 3: Gesing -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                  <a href="dusun/gesing.html" class="mcard card-dusun">
+                     <div class="mimg">
+                        <img src="img/dusun/gesing/gesing.png" alt="Dusun Gesing"/>
+                     </div>
+                     <div class="mbody d-flex flex-column flex-grow-1">
+                        <div class="mcat">Potensi Agraris</div>
+                        <div class="mtit">Dusun Gesing</div>
+                        <div class="mdesc mb-4">Kawasan yang kaya akan hasil bumi perbukitan, menjadi salah satu penggerak utama ketahanan pangan dan ekonomi agraris desa.</div>
+                        <div class="mt-auto">
+                           <div class="btn-red w-100 d-flex justify-content-center align-items-center gap-2" style="padding: 10px; border-radius: 8px; font-size: 0.95rem;">
+                              <span>Jelajahi Dusun</span> <i class="fas fa-arrow-right"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- Dusun 4: Gajihan -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                  <a href="dusun/gajihan.html" class="mcard card-dusun">
+                     <div class="mimg">
+                        <img src="img/dusun/gajihan/gajihan.png" alt="Dusun Gajihan"/>
+                     </div>
+                     <div class="mbody d-flex flex-column flex-grow-1">
+                        <div class="mcat">Kearifan Lokal</div>
+                        <div class="mtit">Dusun Gajihan</div>
+                        <div class="mdesc mb-4">Dusun yang senantiasa menjaga kelestarian tradisi leluhur, memadukan kehidupan modern dengan nilai-nilai luhur budaya setempat.</div>
+                        <div class="mt-auto">
+                           <div class="btn-red w-100 d-flex justify-content-center align-items-center gap-2" style="padding: 10px; border-radius: 8px; font-size: 0.95rem;">
+                              <span>Jelajahi Dusun</span> <i class="fas fa-arrow-right"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- Dusun 5: Kasiman -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                  <a href="dusun/kasiman.html" class="mcard card-dusun">
+                     <div class="mimg">
+                        <img src="img/dusun/kasiman/view_kasiman.jpg" alt="Dusun Kasiman"/>
+                     </div>
+                     <div class="mbody d-flex flex-column flex-grow-1">
+                        <div class="mcat">Sentra Kreatif</div>
+                        <div class="mtit">Dusun Kasiman</div>
+                        <div class="mdesc mb-4">Pusat lahirnya berbagai inovasi warga, mulai dari kerajinan industri rumah tangga hingga pemanfaatan potensi ekonomi kreatif lainnya.</div>
+                        <div class="mt-auto">
+                           <div class="btn-red w-100 d-flex justify-content-center align-items-center gap-2" style="padding: 10px; border-radius: 8px; font-size: 0.95rem;">
+                              <span>Jelajahi Dusun</span> <i class="fas fa-arrow-right"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         PETA DESA / WEBGIS HIGHLIGHT (Menggantikan Special Offer)
+         ============================================================ -->
+      <section id="special">
+         <div class="spbg" style="background: url('img/map-bg.jpg') no-repeat center center; background-size: cover;"></div>
+         <div class="container" style="position:relative;z-index:2;">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="sptag"><i class="fas fa-map me-1"></i>Sistem Informasi Geografis</div>
+                  <h2 class="sptitle">Jelajahi<br/>Peta Digital<br/><span>Desa Kami</span></h2>
+                  <p class="spdesc">Kami mengintegrasikan teknologi pemetaan spasial (WebGIS) untuk memetakan batas administrasi, sebaran infrastruktur, tata guna lahan, hingga potensi UMKM dan pertanian desa secara akurat.</p>
+                  <a href="peta_interaktif.html" class="btn-red"><i class="fas fa-map-marked-alt"></i>Buka Peta Interaktif</a>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="spimgw">
+                     <div class="spglow"></div>
+                     <div class="sppbdg" style="width: auto; padding: 15px;"><span class="np" style="font-size: 1.2rem;"><i class="fas fa-satellite"></i> Update 2026</span></div>
+                     <img src="img/DESA_GEMBLENGAN.jpg" alt="Ilustrasi Peta Desa" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+ <!-- ============================================================
+         POTENSI DESA (Menggantikan Kesenian Adat & Budaya)
+         ============================================================ -->
+      <section id="gallery">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Karya & Kekayaan Alam</span>
+               <h2 class="stitle">Potensi <span>Desa Gemblengan</span></h2>
+               <div class="sline mx-auto"></div>
+            </div>
+            <div class="ggrid" data-aos="fade-up">
+               <div class="gitem"
+                  data-gi="0"
+                  data-gimg="img/tanaman.jpeg"
+                  data-gtitle="Pertanian Hortikultura"
+                  data-gdesc="Sektor agraris yang menjadi tulang punggung perekonomian, dengan komoditas unggulan seperti cabai, tomat, dan jagung.">
+                  <img src="img/tanaman.jpeg" alt="Pertanian Hortikultura"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Pertanian Hortikultura</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="1"
+                  data-gimg="img/lengger.JPG"
+                  data-gtitle="Tari Topeng (Lengger)"
+                  data-gdesc="Kesenian tradisional yang terus dilestarikan oleh masyarakat desa, khususnya di Dusun Bedilon, Kasiman, dan Gajihan.">
+                  <img src="img/lengger.JPG" alt="Tari Lengger"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Tari Lengger</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="2"
+                  data-gimg="img/rigen_bambu.png"
+                  data-gtitle="Kerajinan Bambu Rigen"
+                  data-gdesc="Sentra kerajinan anyaman bambu di Dusun Gesing yang menghasilkan rigen untuk wadah penjemuran tembakau.">
+                  <img src="img/rigen_bambu.png" alt="Kerajinan Bambu"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Kerajinan Bambu</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="3"
+                  data-gimg="img/kripik.png"
+                  data-gtitle="Kelezatan Kuliner Lokal"
+                  data-gdesc="Inovasi kuliner Tempe Kemul Atos (Petos) dan aneka keripik lokal hasil olahan UMKM warga yang renyah dan gurih.">
+                  <img src="img/kripik.png" alt="Kuliner Lokal"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Kuliner Lokal</span></div>
+               </div>
+            </div>
+            
+            <!-- Tombol Hyperlink Menuju Detail Potensi -->
+            <div class="text-center mt-5" data-aos="fade-up">
+               <a href="potensi_desa.html" class="btn-red" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; font-size: 1rem; border-radius: 8px;">
+                  <i class="fas fa-seedling"></i> Lihat Detail Potensi Desa
+               </a>
+            </div>
+         </div>
+      </section>
+
+    <!-- ============================================================
+         SEJARAH DESA (TIMELINE)
+         ============================================================ -->
+      <section id="history" style="background-color: #fcf9f4; padding: 80px 0;">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Jejak Langkah</span>
+               <h2 class="stitle">Sejarah Singkat <span>Desa</span></h2>
+               <div class="sline mx-auto"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Perjalanan panjang terbentuknya peradaban Desa Gemblengan dari masa ke masa[cite: 4].</p>
+            </div>
+            
+            <div class="timeline" data-aos="fade-up">
+               
+               <!-- ITEM TIMELINE 1 -->
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">1820-an</div>
+                     <h5>Kedatangan Prajurit Diponegoro</h5>
+                     <p>Sejarah bermula saat datangnya seorang tokoh yang diyakini sebagai prajurit Pangeran Diponegoro[cite: 3]. Beliau menanamkan jiwa patriotisme, kewirausahaan, serta ajaran Islam pada penduduk asli di lereng Gunung Sindoro[cite: 3].</p>
+                  </div>
+                  <div class="tl-center"><div class="tldot"></div></div>
+                  <div class="tl-right">
+                     <div class="tlyear">1820-an</div>
+                     <h5>Kedatangan Prajurit Diponegoro</h5>
+                     <p>Sejarah bermula saat datangnya seorang tokoh yang diyakini sebagai prajurit Pangeran Diponegoro[cite: 4]. Beliau menanamkan jiwa patriotisme, kewirausahaan, serta ajaran Islam pada penduduk asli di lereng Gunung Sindoro[cite: 4].</p>
+                  </div>
+               </div>
+               
+               <!-- ITEM TIMELINE 2 -->
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">1910-an</div>
+                     <h5>Pusat Peradaban & Perdagangan</h5>
+                     <p>Desa ini berkembang menjadi pusat peradaban dan seni, dibuktikan dengan majunya pendidikan Islam, penduduk yang menunaikan ibadah haji, serta interaksi niaga dengan etnis Tionghoa[cite: 3].</p>
+                  </div>
+                  <div class="tl-center"><div class="tldot"></div></div>
+                  <div class="tl-right">
+                     <div class="tlyear">1910-an</div>
+                     <h5>Pusat Peradaban & Perdagangan</h5>
+                     <p>Desa ini berkembang menjadi pusat peradaban dan seni, dibuktikan dengan majunya pendidikan Islam, penduduk yang menunaikan ibadah haji, serta interaksi niaga dengan etnis Tionghoa[cite: 4].</p>
+                  </div>
+               </div>
+               
+               <!-- ITEM TIMELINE 3 -->
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">1934</div>
+                     <h5>Pembangunan Masjid Pertama</h5>
+                     <p>Pada masa kepemimpinan KH. Abdurrahman, dibangunlah Masjid Baiturrahman di Dusun Gemblengan yang merupakan masjid pertama di daerah tersebut dan sekitarnya[cite: 3].</p>
+                  </div>
+                  <div class="tl-center"><div class="tldot"></div></div>
+                  <div class="tl-right">
+                     <div class="tlyear">1934</div>
+                     <h5>Pembangunan Masjid Pertama</h5>
+                     <p>Pada masa kepemimpinan KH. Abdurrahman, dibangunlah Masjid Baiturrahman di Dusun Gemblengan yang merupakan masjid pertama di daerah tersebut dan sekitarnya[cite: 4].</p>
+                  </div>
+               </div>
+
+               <!-- ITEM TIMELINE 4 -->
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">1943</div>
+                     <h5>Era Demokrasi Pemilihan Desa</h5>
+                     <p>Sistem kepemimpinan setingkat Demang beralih menjadi sistem demokratis melalui pemilihan (Glondong)[cite: 3]. Hal ini memicu berbagai pembangunan fasilitas umum dan Sekolah Dasar[cite: 3].</p>
+                  </div>
+                  <div class="tl-center"><div class="tldot"></div></div>
+                  <div class="tl-right">
+                     <div class="tlyear">1943</div>
+                     <h5>Era Demokrasi Pemilihan Desa</h5>
+                     <p>Sistem kepemimpinan setingkat Demang beralih menjadi sistem demokratis melalui pemilihan (Glondong)[cite: 4]. Hal ini memicu berbagai pembangunan fasilitas umum dan Sekolah Dasar[cite: 4].</p>
+                  </div>
+               </div>
+
+            </div>
+
+            <!-- TOMBOL MENUJU SEJARAH LENGKAP -->
+            <div class="text-center mt-5" data-aos="fade-up">
+               <a href="sejarah_desagemblengan.html" class="btn-red" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; font-size: 1rem; border-radius: 8px;">
+                  <i class="fas fa-book-open"></i> Baca Sejarah & Daftar Kades Selengkapnya
+               </a>
+            </div>
+            
+         </div>
+      </section>
+
+    <!-- ============================================================
+         DATA PERANGKAT & LEMBAGA DESA (Bagian Aparatur)
+         ============================================================ -->
+      <section id="chefs" style="background-color: #ffffff; padding: 80px 0;">
+         
+         <!-- Style CSS Internal untuk mempercantik Bagan -->
+         <style>
+            .org-node {
+               background: #ffffff;
+               border: 2px solid #dc3545; /* Garis tepi merah */
+               border-radius: 8px; /* Sudut membulat */
+               /* Bayangan (Drop Shadow) lembut berwarna merah */
+               box-shadow: 0 6px 16px rgba(220, 53, 69, 0.2); 
+               padding: 12px 10px;
+               font-weight: 700;
+               color: #2b2b2b;
+               font-size: 13px;
+               text-align: center;
+               position: absolute;
+               z-index: 2;
+               box-sizing: border-box;
+               transition: all 0.3s ease;
+            }
+            .org-node:hover {
+               transform: translate(-50%, -4px) !important;
+               box-shadow: 0 10px 22px rgba(220, 53, 69, 0.35);
+               border-color: #b02a37;
+            }
+            .org-line {
+               background: #2b2b2b;
+               position: absolute;
+               z-index: 1;
+            }
+         </style>
+
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Pemerintahan Desa</span>
+               <h2 class="stitle">Bagan Struktur <span>Aparatur Desa</span></h2>
+               <div class="sline mx-auto"></div>
+            </div>
+            
+            <!-- Wrapper Bagan Responsif (Bisa di-scroll ke samping di HP) -->
+            <div class="org-chart-wrapper text-center w-100" data-aos="fade-up" style="overflow-x: auto; padding: 1rem 0 3rem 0;">
+               
+               <!-- Kontainer Utama Bagan (Presisi Koordinat Pixel Absolut) -->
+               <div style="position: relative; width: 960px; height: 400px; margin: 0 auto; font-family: 'Poppins', sans-serif;">
+                  
+                  <!-- GARIS UTAMA VERTIKAL (Kades ke Kadus) -->
+                  <div class="org-line" style="left: 480px; top: 44px; width: 2px; height: 276px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 1 ================= -->
+                  <div class="org-node" style="left: 480px; top: 0; width: 200px; font-size: 15px; transform: translateX(-50%);">
+                     KEPALA DESA
+                  </div>
+
+                  <!-- GARIS HORIZONTAL 1 (Menghubungkan Seksi & Sekdes) -->
+                  <!-- Mulai tepat di tengah Seksi 1 (120px) sampai tengah Sekdes (720px) = 600px -->
+                  <div class="org-line" style="left: 120px; top: 80px; width: 600px; height: 2px;"></div>
+                  
+                  <!-- Garis Tarik Turun untuk Seksi & Sekdes -->
+                  <div class="org-line" style="left: 120px; top: 80px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 240px; top: 80px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 360px; top: 80px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 720px; top: 80px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 2 ================= -->
+                  <!-- Cabang Kiri (Seksi) -->
+                  <div class="org-node" style="left: 120px; top: 110px; width: 110px; transform: translateX(-50%);">KEPALA<br>SEKSI</div>
+                  <div class="org-node" style="left: 240px; top: 110px; width: 110px; transform: translateX(-50%);">KEPALA<br>SEKSI</div>
+                  <div class="org-node" style="left: 360px; top: 110px; width: 110px; transform: translateX(-50%);">KEPALA<br>SEKSI</div>
+
+                  <!-- Cabang Kanan (Sekdes) -->
+                  <div class="org-node" style="left: 720px; top: 110px; width: 160px; font-size: 14px; transform: translateX(-50%);">SEKRETARIS DESA</div>
+
+                  <!-- Garis Tarik Turun dari Sekdes ke Urusan -->
+                  <div class="org-line" style="left: 720px; top: 154px; width: 2px; height: 36px; transform: translateX(-50%);"></div>
+
+                  <!-- GARIS HORIZONTAL 2 (Menghubungkan Urusan) -->
+                  <!-- Mulai tepat di tengah Urusan 1 (580px) sampai tengah Urusan 3 (860px) = 280px -->
+                  <div class="org-line" style="left: 580px; top: 190px; width: 280px; height: 2px;"></div>
+
+                  <!-- Garis Tarik Turun untuk Urusan -->
+                  <div class="org-line" style="left: 580px; top: 190px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 720px; top: 190px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+                  <div class="org-line" style="left: 860px; top: 190px; width: 2px; height: 30px; transform: translateX(-50%);"></div>
+
+                  <!-- ================= LEVEL 3 ================= -->
+                  <div class="org-node" style="left: 580px; top: 220px; width: 110px; transform: translateX(-50%);">KEPALA<br>URUSAN</div>
+                  <div class="org-node" style="left: 720px; top: 220px; width: 110px; transform: translateX(-50%);">KEPALA<br>URUSAN</div>
+                  <div class="org-node" style="left: 860px; top: 220px; width: 110px; transform: translateX(-50%);">KEPALA<br>URUSAN</div>
+
+                  <!-- ================= LEVEL 4 ================= -->
+                  <div class="org-node" style="left: 480px; top: 320px; width: 140px; transform: translateX(-50%);">KEPALA<br>DUSUN</div>
+
+               </div>
+            </div>
+
+            <!-- TOMBOL MENUJU RINCIAN STRUKTUR HTML BARU -->
+            <div class="text-center mt-2" data-aos="fade-up">
+               <a href="rincian_struktur_organisasi.html" class="btn-red" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; font-size: 1rem; border-radius: 8px;">
+                  <i class="fas fa-sitemap"></i> Lihat Rincian & Tugas Aparatur
+               </a>
+            </div>
+      
+         </div>
+      </section>
+
+      
+
+<!-- ============================================================
+         SECTION TRANSPARANSI APBDES
+         ============================================================ -->
+      <section id="transparansi" class="py-5" style="background-color: #fcf9f4;">
+         <div class="container my-4">
+            
+            <!-- Judul Section -->
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="d-block" style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: #d32f2f;">Keterbukaan Informasi Publik</span>
+               <h2 class="fw-bold" style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #2b2b2b;">
+                  Transparansi <span style="color: #e74c3c;">APBDes 2026</span>
+               </h2>
+               <div style="width: 60px; height: 3px; background-color: #f39c12; margin: 15px auto;"></div>
+               <p class="text-muted mt-3 mx-auto" style="max-width: 650px; font-size: 1.05rem;">
+                  Wujud komitmen pemerintahan desa dalam mewujudkan tata kelola keuangan yang transparan, akuntabel, dan berpihak pada masyarakat.
+               </p>
+            </div>
+
+            <!-- KONTEN KIRI & KANAN -->
+            <!-- Penambahan align-items-stretch di sini adalah kunci agar tinggi kedua kolom sama -->
+            <div class="row g-4 align-items-stretch justify-content-center" data-aos="fade-up" data-aos-delay="100">
+               
+               <!-- KOLOM KIRI (Grafik Gambar) -->
+               <div class="col-lg-5">
+                  <!-- Penambahan h-100 dan justify-content-center agar gambar berada di tengah secara vertikal -->
+                  <div class="bg-white shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center" style="border-radius: 12px; border: 1px solid #eaeaea;">
+                     <!-- PERHATIAN: Pastikan path gambar src="" ini sesuai dengan folder tempat Anda menyimpan foto grafiknya -->
+                     <img src="img/apbdes2026.png" alt="Grafik APBDes" class="img-fluid" style="max-height: 100%; width: 100%; object-fit: contain;">
+                  </div>
+               </div>
+
+               <!-- KOLOM KANAN (Tabel Rincian Pendapatan) -->
+               <div class="col-lg-7" data-aos="fade-left">
+   <div style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+      
+      <div class="mb-4">
+         <div class="d-flex justify-content-between mb-2">
+            <span class="fw-bold"></i>Dana Desa</span>
+            <span class="fw-bold">Rp 373.456.000</span>
+         </div>
+         
+      </div>
+
+      <div class="mb-4">
+         <div class="d-flex justify-content-between mb-2">
+            <span class="fw-bold"></i>BHPRD Kabupaten</span>
+            <span class="fw-bold">Rp 74.133.250</span>
+         </div>
+         
+      </div>
+
+      <div class="mb-4">
+         <div class="d-flex justify-content-between mb-2">
+            <span class="fw-bold"></i>Alokasi Dana Desa</span>
+            <span class="fw-bold">Rp 525.648.000</span>
+         </div>
+         
+      </div>
+      <div class="mb-4">
+         <div class="d-flex justify-content-between mb-2">
+            <span class="fw-bold"></i>Bunga Bank</span>
+            <span class="fw-bold">Rp 2.000.000 </span>
+         </div>
+         
+      </div>
+
+
+      <hr class="my-4">
+      <a href="apbdes.html" class="btn-red w-100 justify-content-center"><i class="fas fa-chart-pie"></i> Lihat Laporan Keuangan Lengkap</a>
+   </div>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         KONTAK / PUSAT INFORMASI
+         ============================================================ -->
+      <section id="contact-section">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Pusat Informasi</span>
+               <h2 class="stitle">Hubungi <span>Balai Desa</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Sampaikan aspirasi, aduan masyarakat, atau pertanyaan melalui form di bawah atau datang langsung ke Balai Desa.</p>
+            </div>
+            <div class="row g-4 align-items-stretch">
+
+                <!-- BOX KONTAK -->
+                <div class="col-lg-4 d-flex" data-aos="fade-right">
+                    <div class="ctdark w-100">
+                        <h4>Informasi Kontak</h4>
+                        <p class="ctsub">
+                            Kantor kami siap melayani Anda pada jam kerja.
+                        </p>
+
+                        <div class="ctitem">
+                            <div class="cticon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ctinfo">
+                                <strong>Alamat Balai Desa</strong>
+                                <span>
+                                    Bedilon, Gemblengan, Kec. Garung,<br>
+                                    Kabupaten Wonosobo, Jawa Tengah
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="ctitem">
+                            <div class="cticon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ctinfo">
+                                <strong>Telepon / WhatsApp</strong>
+                                <span>+62 812-3456-7890</span>
+                            </div>
+                        </div>
+
+                        <div class="ctitem">
+                            <div class="cticon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ctinfo">
+                                <strong>Email</strong>
+                                <span>sosmed.gemblengan@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="ctsocrow mt-auto">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOX FORM -->
+                <div class="col-lg-8 d-flex">
+               <!-- ==========================================
+             FORM KONTAK WHATSAPP
+             ========================================== -->
+        <style>
+            /* Styling dasar form agar mirip dengan desain Anda */
+            .wa-form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            width: 100%;
+            height: 100%;
+        }
+                .ctdark{
+                    height:100%;
+                    display:flex;
+                    flex-direction:column;
+                }
+
+                #contact-section .row{
+                    align-items:stretch;
+                }
+
+                #contact-section .col-lg-4,
+                #contact-section .col-lg-8{
+                    display:flex;
+                }
+            .wa-form-group {
+                margin-bottom: 20px;
+            }
+            .wa-form-group label {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: #333;
+            }
+            .wa-form-control {
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: border-color 0.3s;
+            }
+            .wa-form-control:focus {
+                outline: none;
+                border-color: #e74c3c;
+            }
+            .btn-wa {
+                background-color: #d32f2f; /* Warna merah */
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                font-size: 1rem;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+                transition: transform 0.3s, box-shadow 0.3s;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .btn-wa:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6);
+            }
+        </style>
+
+        <div class="wa-form-container">
+            <!-- Form dihubungkan dengan fungsi JS kirimKeWhatsApp() -->
+            <form id="formWhatsApp" onsubmit="kirimKeWhatsApp(event)">
+        
+                <div class="row">
+                    <div class="col-md-6 wa-form-group">
+                        <label for="namaLengkap">Nama Lengkap *</label>
+                        <input type="text" id="namaLengkap" class="wa-form-control" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="col-md-6 wa-form-group">
+                        <label for="nomorHp">Nomor Handphone *</label>
+                        <input type="tel" id="nomorHp" class="wa-form-control" placeholder="08xxxxxxxx" required>
+                    </div>
+                </div>
+
+                <div class="wa-form-group">
+                    <label for="kategoriPesan">Tujuan Pesan / Kategori *</label>
+                    <select id="kategoriPesan" class="wa-form-control" required>
+                        <option value="Pengaduan Masyarakat (Infrastruktur, Layanan, dll)">Pengaduan Masyarakat (Infrastruktur, Layanan, dll)</option>
+                        <option value="Permohonan Layanan Surat">Permohonan Layanan Surat</option>
+                        <option value="Informasi Publik">Informasi Publik</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="wa-form-group">
+                    <label for="isiPesan">Isi Pesan / Laporan *</label>
+                    <textarea id="isiPesan" class="wa-form-control" rows="5" placeholder="Tuliskan aspirasi atau pengaduan Anda di sini..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-wa">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+            </form>
+        </div>
+
+        <!-- ==========================================
+             JAVASCRIPT UNTUK WHATSAPP
+             ========================================== -->
+        </form>
+</div>
+</div>
+
+
+        <script>
+            function kirimKeWhatsApp(event) {
+                // Mencegah halaman reload saat tombol ditekan
+                event.preventDefault();
+
+                // 1. Ganti dengan nomor WhatsApp tujuan Desa (Format 62, hilangkan angka 0 di depan)
+                const nomorTujuan = "6281234567890"; 
+
+                // 2. Mengambil data dari inputan form
+                const nama = document.getElementById('namaLengkap').value;
+                const hp = document.getElementById('nomorHp').value;
+                const kategori = document.getElementById('kategoriPesan').value;
+                const pesan = document.getElementById('isiPesan').value;
+
+                // 3. Menyusun templat pesan (Tanda bintang * akan membuat teks tebal di WA)
+                const teksWhatsApp = 
+        `Halo Admin WebDesa Gemblengan,
+
+        Saya ingin menyampaikan pesan/laporan dengan detail sebagai berikut:
+
+        *Nama:* ${nama}
+        *No. HP:* ${hp}
+        *Kategori:* ${kategori}
+
+        *Isi Pesan:*
+        ${pesan}
+
+        Terima kasih.`;
+
+                // 4. Mengubah teks menjadi format URL yang valid (mengubah spasi/enter menjadi kode URL)
+                const pesanEncoded = encodeURIComponent(teksWhatsApp);
+
+                // 5. Membuat tautan API WhatsApp
+                const linkWA = `https://wa.me/${+6285163566216}?text=${pesanEncoded}`;
+
+                // 6. Membuka tautan tersebut di tab baru
+                window.open(linkWA, '_blank');
+            }
+        </script>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Akses Cepat</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#hero"><i class="fas fa-chevron-right"></i>Beranda</a></li>
+                     <li><a href="#about"><i class="fas fa-chevron-right"></i>Profil Desa</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Potensi Desa</a></li>
+                     <li><a href="#special"><i class="fas fa-chevron-right"></i>Peta Spasial (WebGIS)</a></li>
+                     <li><a href="#blog"><i class="fas fa-chevron-right"></i>Berita Desa</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Layanan Warga</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#reservation"><i class="fas fa-chevron-right"></i>Pengajuan Surat</a></li>
+                     <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>Lapor/Aduan</a></li>
+                     <li><a href="#chefs"><i class="fas fa-chevron-right"></i>Data Aparatur</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa, Kabupaten Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Telepon</strong>+62 851-6356-6216</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa Srawung</span>. All Rights Reserved. <br>Design adapted from Sarab Template.</p>
+                  <div><a href="#">Kebijakan Privasi</a><a href="#">Transparansi Anggaran</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+      <!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- Magnific Popup -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>

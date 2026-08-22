@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Pemerintah Desa">
+      <meta name="description" content="Galeri Peta Digital dan WebGIS Desa Gemblengan">
+      <title>Peta Digital (WebGIS) - Desa Gemblengan</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <link href="css/aos.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <link rel="stylesheet" href="css/style.css" />
+      
+      <style>
+         /* Tambahan style khusus untuk header halaman dalam (Inner Page Header) */
+         .inner-header {
+            position: relative;
+            background-color: #111111; /* Mengubah background menjadi hitam */
+            padding: 120px 0 80px 0;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 60px;
+         }
+         .inner-header .htitle {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 15px;
+         }
+         .inner-header .hdesc {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+         }
+         
+         /* Tambahan style untuk kotak peta yang bisa diklik keseluruhan */
+         .mcard-wrapper {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: block;
+            height: 100%;
+            transition: transform 0.3s ease;
+         }
+         .mcard-wrapper:hover {
+            transform: translateY(-5px);
+         }
+         .mcard-wrapper .mcard {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+         }
+         .mcard-wrapper .mbody {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+         }
+         .mcard-wrapper .mfoot-map {
+            margin-top: auto; /* Mendorong footer ke bawah agar seragam */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+         }
+         .mcard-wrapper .klik-info {
+            color: #e74c3c; /* Warna tulisan panduan klik */
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+         }
+         .mcard-wrapper:hover .klik-info {
+            color: #c0392b;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+62 851-6356-6216</span>
+                  <span><i class="fas fa-envelope"></i>sosmed.gemblengan@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Balai Desa Gemblengan, Garung, Wonosobo, Jawa Tengah</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-check-circle me-1"></i>Pelayanan Warga Buka</span>
+                  <div class="tsoc">
+                     <a href="https://wa.me/+6285163566216"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/pemdes.gemblengan?igsh=dXhzaGEzeGY3bmZl"><i class="fab fa-instagram"></i></a>
+                     <a href="https://youtube.com/@desagemblengan?si=eHCK8i5s1fR8hWbS"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-landmark"></i></div>
+                  <div>
+                     <div class="bname">Web<span>Desa Gemblengan</span></div>
+                     <div class="bsub">Pemerintahan & Informasi Terpadu</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+                  <!-- Dropdown Profil Desa -->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#about" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profil Desa <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdownProfil">
+                        <li><a class="dropdown-item" href="geografi_demografi.html">Geografi & Demografi</a></li>
+                        <li><a class="dropdown-item" href="sejarah_desagemblengan.html">Sejarah Desa</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="index.html#menu" id="navbarDropdownPotensi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Info Dusun <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                     </a>
+                     <ul class="dropdown-menu border-0 shadow">
+                       <li><a class="dropdown-item" href="dusun/gemblengan.html">Dusun Gemblengan</a></li>
+                        <li><a class="dropdown-item" href="dusun/bedilon.html">Dusun Bedilon</a></li>
+                        <li><a class="dropdown-item" href="dusun/gesing.html">Dusun Gesing</a></li>
+                        <li><a class="dropdown-item" href="dusun/gajihan.html">Dusun Gajihan</a></li>
+                        <li><a class="dropdown-item" href="dusun/kasiman.html">Dusun Kasiman</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link active" href="Peta_Interaktif.html">Peta Desa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="potensi_desa.html">Potensi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="rincian_struktur_organisasi.html">Aparatur</a></li>
+                  <li class="nav-item"><a class="nav-link" href="apbdes.html">Transparansi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Kontak</a></li>
+               </ul>
+               <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                   <img src="img/lambang_kabupaten_wonosobo.webp" alt="Logo Kanan" style="height: 45px; max-width: 150px; object-fit: contain; display: block;">
+                </div>
+            </div>
+         </div>
+      </nav>
+
+      <section class="inner-header">
+           <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+              <span class="mb-3 px-4 py-2 shadow-sm" style="background-color: #f39c12; color: #fff; font-weight: 600; border-radius: 50px; font-size: 0.85rem; letter-spacing: 0.5px; display: inline-block;">
+                 <i class="fas fa-satellite me-1"></i> Sistem Informasi Geografis
+              </span>
+              <h1 class="htitle text-white mb-3">Galeri <span style="color: var(--primary);">Peta Interaktif</span></h1>
+              <p class="hdesc text-light mx-auto" style="max-width: 600px;">Jelajahi berbagai informasi keruangan Desa Gemblengan secara digital. Klik pada kotak kategori peta di bawah ini untuk melihat detail spasial wilayah kami.</p>
+           </div>
+        </section>
+
+      <section id="peta-gallery" style="padding-bottom: 80px;">
+         <div class="container">
+            <div class="row g-4">
+               
+               <!-- 1. PETA ADMINISTRASI -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+                  <a href="peta_interaktif/peta_administrasi/peta_administrasi.html" class="mcard-wrapper">
+                     <div class="mcard">
+                        <div class="mimg">
+                           <img src="img/foto_peta/administrasi.jpg" alt="Peta Administrasi"/>
+                           <div class="mbdg"><i class="fas fa-map"></i> Dasar</div>
+                        </div>
+                        <div class="mbody">
+                           <div class="mcat">Informasi Wilayah</div>
+                           <div class="mtit">Peta Administrasi</div>
+                           <div class="mdesc">Peta dasar yang menampilkan batas wilayah administratif desa, batas antar dusun, jaringan jalan, dan tata letak dasar wilayah.</div>
+                           <div class="mfoot-map">
+                              <span style="font-size: 0.85rem; color: #666;"><i class="fas fa-sync-alt me-1"></i> Update 2026</span>
+                              <span class="klik-info">Buka Peta <i class="fas fa-arrow-right ms-1"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- 2. PETA SEBARAN FASILITAS UMUM (Tambahan Request) -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                  <a href="peta_interaktif/peta_fasilitas_umum/peta_fasilitas_umum.html" class="mcard-wrapper">
+                     <div class="mcard">
+                        <div class="mimg">
+                           <img src="img/foto_peta/fasilitas.jpg" alt="Peta Fasilitas Umum"/>
+                           <div class="mbdg hot"><i class="fas fa-building"></i> Fasilitas</div>
+                        </div>
+                        <div class="mbody">
+                           <div class="mcat">Informasi Publik</div>
+                           <div class="mtit">Peta Sebaran Fasilitas Umum</div>
+                           <div class="mdesc">Pemetaan sebaran titik lokasi fasilitas publik seperti sarana pendidikan, tempat ibadah, dan fasilitas kesehatan desa.</div>
+                           <div class="mfoot-map">
+                              <span style="font-size: 0.85rem; color: #666;"><i class="fas fa-sync-alt me-1"></i> Update 2026</span>
+                              <span class="klik-info">Buka Peta <i class="fas fa-arrow-right ms-1"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- 3. PETA PENGGUNAAN LAHAN -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                  <a href="peta_interaktif/peta_penggunaan_lahan/peta_penggunaan_lahan.html" class="mcard-wrapper">
+                     <div class="mcard">
+                        <div class="mimg">
+                           <img src="img/foto_peta/pengunaan_lahan.jpg" alt="Peta Penggunaan Lahan"/>
+                           <div class="mbdg new"><i class="fas fa-leaf"></i> Agraris</div>
+                        </div>
+                        <div class="mbody">
+                           <div class="mcat">Pemetaan Tematik</div>
+                           <div class="mtit">Peta Penggunaan Lahan</div>
+                           <div class="mdesc">Visualisasi tutupan lahan desa yang mencakup area persawahan, perkebunan, pemukiman penduduk, dan sempadan sungai.</div>
+                           <div class="mfoot-map">
+                              <span style="font-size: 0.85rem; color: #666;"><i class="fas fa-sync-alt me-1"></i> Update 2026</span>
+                              <span class="klik-info">Buka Peta <i class="fas fa-arrow-right ms-1"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- 4. PETA TOPOGRAFI -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+                  <a href="peta_interaktif/peta_topografi/peta_topografi.html" class="mcard-wrapper">
+                     <div class="mcard">
+                        <div class="mimg">
+                           <img src="img/foto_peta/topografi.jpg" alt="Peta Topografi"/>
+                           <div class="mbdg"><i class="fas fa-mountain"></i> Fisik Alam</div>
+                        </div>
+                        <div class="mbody">
+                           <div class="mcat">Pemetaan Tematik</div>
+                           <div class="mtit">Peta Topografi</div>
+                           <div class="mdesc">Menampilkan model elevasi, kelerengan, dan kontur digital wilayah desa untuk keperluan perencanaan pembangunan dan mitigasi.</div>
+                           <div class="mfoot-map">
+                              <span style="font-size: 0.85rem; color: #666;"><i class="fas fa-sync-alt me-1"></i> Update 2026</span>
+                              <span class="klik-info">Buka Peta <i class="fas fa-arrow-right ms-1"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- 5. PETA CURAH HUJAN -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                  <a href="peta_interaktif/peta_curah_hujan/peta_curah_hujan.html" class="mcard-wrapper">
+                     <div class="mcard">
+                        <div class="mimg">
+                           <!-- Kamu bisa ganti src gambarnya nanti -->
+                           <img src="img/foto_peta/curah_hujan.jpg" alt="Peta Curah Hujan" style="filter: hue-rotate(180deg);"/>
+                           <div class="mbdg"><i class="fas fa-cloud-rain"></i> Klimatologi</div>
+                        </div>
+                        <div class="mbody">
+                           <div class="mcat">Fisik Alam</div>
+                           <div class="mtit">Peta Curah Hujan</div>
+                           <div class="mdesc">Pemetaan zonasi intensitas curah hujan di wilayah desa yang sangat berguna untuk mendukung kalender pola tanam agrikultur.</div>
+                           <div class="mfoot-map">
+                              <span style="font-size: 0.85rem; color: #666;"><i class="fas fa-sync-alt me-1"></i> Update 2026</span>
+                              <span class="klik-info">Buka Peta <i class="fas fa-arrow-right ms-1"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <!-- 6. PETA JENIS TANAH -->
+               <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                  <a href="peta_interaktif/peta_jenis_tanah/peta_jenis_tanah.html" class="mcard-wrapper">
+                     <div class="mcard">
+                        <div class="mimg">
+                           <!-- Kamu bisa ganti src gambarnya nanti -->
+                           <img src="img/foto_peta/jenis_tanah.jpg" alt="Peta Jenis Tanah" style="filter: sepia(100%);"/>
+                           <div class="mbdg"><i class="fas fa-layer-group"></i> Geologi</div>
+                        </div>
+                        <div class="mbody">
+                           <div class="mcat">Fisik Alam</div>
+                           <div class="mtit">Peta Jenis Tanah</div>
+                           <div class="mdesc">Informasi klasifikasi jenis dan tekstur tanah pada wilayah desa untuk mengidentifikasi kesesuaian dan potensi lahan.</div>
+                           <div class="mfoot-map">
+                              <span style="font-size: 0.85rem; color: #666;"><i class="fas fa-sync-alt me-1"></i> Update 2026</span>
+                              <span class="klik-info">Buka Peta <i class="fas fa-arrow-right ms-1"></i></span>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+      DOWNLOAD DATA SPASIAL
+      ============================================================ -->
+      <section id="download-data" style="background-color: #fcf9f4; padding: 60px 0;">
+         <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+               <div class="col-lg-10">
+                  <div style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+                     <div style="flex: 1; min-width: 300px;">
+                        <div class="d-flex align-items-center mb-2">
+                           <i class="fas fa-database text-danger" style="font-size: 1.8rem; margin-right: 15px;"></i>
+                           <h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 700;">Portal Open Data Geospasial</h3>
+                        </div>
+                        <p style="color: #666; margin-bottom: 0;">Mendukung transparansi informasi publik. Unduh dataset spasial batas administrasi dan infrastruktur Desa Gemblengan untuk keperluan riset dan pengembangan.</p>
+                     </div>
+                     <div>
+                        <a href="https://drive.google.com/drive/folders/1Zt5OsoElMvBvzf-NvC675Z980D71k8qJ?usp=sharing" class="btn-red" style="padding: 12px 25px; font-size: 1rem; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;">
+                           <i class="fas fa-cloud-download-alt"></i> Unduh Data Sekarang
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Web<span>Desa</span></div>
+                  <p class="fdesc">Media informasi, transparansi, dan pelayanan publik resmi milik Pemerintah Desa demi mewujudkan masyarakat yang mandiri dan sejahtera.</p>
+               </div>
+               <div class="col-sm-6 col-lg-4">
+                  <div class="ftit">Layanan Spasial</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="Peta/peta_administrasi/peta_administrasi.html"><i class="fas fa-chevron-right"></i> Peta Administrasi</a></li>
+                     <li><a href="Peta/peta_penggunaan_lahan/peta_penggunaan_lahan.html"><i class="fas fa-chevron-right"></i> Peta Penggunaan Lahan</a></li>
+                     <li><a href="Peta/peta_fasilitas_umum/peta_fasilitas_umum.html"><i class="fas fa-chevron-right"></i> Peta Fasilitas Umum</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Kontak Kami</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Alamat</strong>Balai Desa, Kabupaten Wonosobo</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>sosmed.gemblengan@gmail.com</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Pemerintah Desa</span>. All Rights Reserved.</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>
